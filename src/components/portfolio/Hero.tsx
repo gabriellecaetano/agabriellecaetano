@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Linkedin, Mail, ExternalLink } from "lucide-react";
+import gabriellePhoto from "@/assets/gabrielle-photo.jpg";
 
 const Hero = () => {
   return (
@@ -12,9 +13,20 @@ const Hero = () => {
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="mb-8"
+        >
+          <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden ring-4 ring-primary/20 ring-offset-4 ring-offset-background shadow-xl">
+            <img src={gabriellePhoto} alt="Gabrielle Caetano" className="w-full h-full object-cover" />
+          </div>
+        </motion.div>
+
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
         >
           <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-6">
             Product Marketing
