@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Linkedin, Mail, ExternalLink } from "lucide-react";
+import gabriellePhoto from "@/assets/gabrielle-photo.jpg";
 
 const Hero = () => {
   return (
