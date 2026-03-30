@@ -241,17 +241,44 @@ const AssaiCaseStudy = () => {
                     </div>
 
                     {phase.links && phase.links.length > 0 && (
-                      <div className="flex flex-wrap gap-3 mt-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                         {phase.links.map((link) => (
                           <a
                             key={link.url}
                             href={link.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 font-body text-sm font-medium text-primary hover:bg-primary/10 transition-colors"
+                            className="group block rounded-2xl border border-border bg-background overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all"
                           >
-                            <ExternalLink className="w-3.5 h-3.5" />
-                            {link.label}
+                            <div className="aspect-video bg-muted flex items-center justify-center relative overflow-hidden">
+                              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/15" />
+                              <div className="relative flex flex-col items-center gap-3">
+                                {link.label.includes("Figma") ? (
+                                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+                                    <svg viewBox="0 0 38 57" className="w-6 h-8" fill="none">
+                                      <path d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z" fill="hsl(var(--primary))"/>
+                                      <path d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z" fill="hsl(var(--primary))" opacity="0.4"/>
+                                      <path d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z" fill="hsl(var(--primary))" opacity="0.6"/>
+                                      <path d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z" fill="hsl(var(--primary))" opacity="0.8"/>
+                                      <path d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z" fill="hsl(var(--primary))" opacity="0.6"/>
+                                    </svg>
+                                  </div>
+                                ) : (
+                                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+                                    <Rocket className="w-7 h-7 text-primary" />
+                                  </div>
+                                )}
+                                <span className="font-body text-xs text-muted-foreground uppercase tracking-widest">
+                                  {link.label.includes("Figma") ? "Protótipo Interativo" : "MVP Funcional"}
+                                </span>
+                              </div>
+                            </div>
+                            <div className="p-4 flex items-center justify-between">
+                              <span className="font-body text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                                {link.label}
+                              </span>
+                              <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                            </div>
                           </a>
                         ))}
                       </div>
