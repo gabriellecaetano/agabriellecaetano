@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { ArrowDown, Linkedin, Mail } from "lucide-react";
 import gabriellePhoto from "@/assets/gabrielle-photo.jpg";
 
 const Hero = () => {
@@ -37,54 +37,60 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
-          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight text-foreground mb-8"
+          className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-tight text-foreground mb-8"
         >
-          Gabrielle
+          Marketing não é sobre campanha.
           <br />
-          <span className="italic font-medium text-primary">Caetano</span>
+          <span className="italic font-medium text-primary">É sobre crescimento.</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="font-body text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="font-body text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed"
         >
-          +3 anos transformando dados em estratégias de crescimento.
-          <br className="hidden md:block" />
-          Marketplaces, automação e experiência do usuário.
+          Sou Gabrielle Caetano, Analista de Marketing com foco em produto, dados e estratégia.
+          Atuo conectando aquisição, retenção e experiência do usuário para gerar crescimento sustentável.
         </motion.p>
+
+        {/* Metrics */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="flex flex-wrap items-center justify-center gap-6 mb-10"
+        >
+          {[
+            { value: "+20%", label: "aumento em conversões" },
+            { value: "+10%", label: "melhoria em retenção" },
+            { value: "SaaS", label: "& marketplace" },
+          ].map((m) => (
+            <div key={m.label} className="text-center">
+              <p className="font-display text-2xl md:text-3xl font-bold text-foreground">{m.value}</p>
+              <p className="font-body text-xs text-muted-foreground mt-1">{m.label}</p>
+            </div>
+          ))}
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.45 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
           className="flex items-center justify-center gap-4"
         >
           <a
-            href="https://www.linkedin.com/in/gabriellecaetano/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-body text-sm font-medium hover:opacity-90 transition-opacity"
+            href="#cases"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-body text-sm font-semibold hover:opacity-90 transition-opacity"
           >
-            <Linkedin className="w-4 h-4" />
-            LinkedIn
+            Ver meus projetos
           </a>
           <a
-            href="mailto:gabriellecontato@outlook.com.br"
+            href="#contato"
             className="inline-flex items-center gap-2 border border-border text-foreground px-6 py-3 rounded-full font-body text-sm font-medium hover:bg-muted transition-colors"
           >
             <Mail className="w-4 h-4" />
-            Contato
-          </a>
-          <a
-            href="https://miro.com/app/board/uXjVIdYa0dY=/?share_link_id=364387839043"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border border-border text-foreground px-6 py-3 rounded-full font-body text-sm font-medium hover:bg-muted transition-colors"
-          >
-            <ExternalLink className="w-4 h-4" />
-            Meu PDI
+            Falar comigo
           </a>
         </motion.div>
 
