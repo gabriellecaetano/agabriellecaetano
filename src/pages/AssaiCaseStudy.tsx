@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, ShoppingCart, Users, Search, Lightbulb, Rocket, BarChart3, Target, TrendingUp, MessageSquare, ChevronRight } from "lucide-react";
+import { ArrowLeft, ShoppingCart, Users, Search, Lightbulb, Rocket, BarChart3, Target, TrendingUp, MessageSquare, ChevronRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Section = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
@@ -52,6 +52,10 @@ const phases = [
       "Testes de usabilidade com usuários reais — avaliando navegação, compreensão e satisfação.",
       "Iterações no design baseadas em feedback direto dos testes.",
       "Construção do MVP funcional na plataforma Adalo.",
+    ],
+    links: [
+      { label: "Ver protótipo no Figma", url: "https://www.figma.com/proto/TfXQVQmtzir905VLL36tzs/Estudos?page-id=153%3A530&node-id=153-532&p=f&viewport=57%2C69%2C0.31&t=er1tikfKhi7mYVPr-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=153%3A532" },
+      { label: "Testar MVP no Adalo", url: "https://postechfiapfase3.adalo.com/assa-app" },
     ],
     highlight: "Principais ajustes: simplificação do fluxo de troca de pontos e melhoria na hierarquia visual das ofertas.",
   },
@@ -235,6 +239,23 @@ const AssaiCaseStudy = () => {
                         {phase.highlight}
                       </p>
                     </div>
+
+                    {phase.links && phase.links.length > 0 && (
+                      <div className="flex flex-wrap gap-3 mt-4">
+                        {phase.links.map((link) => (
+                          <a
+                            key={link.url}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 font-body text-sm font-medium text-primary hover:bg-primary/10 transition-colors"
+                          >
+                            <ExternalLink className="w-3.5 h-3.5" />
+                            {link.label}
+                          </a>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </Section>
