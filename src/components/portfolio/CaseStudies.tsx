@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ShoppingCart, ExternalLink, BookOpen, Microscope } from "lucide-react";
+import { ArrowRight, ShoppingCart, ExternalLink, BookOpen, Microscope, Store } from "lucide-react";
 import { Link } from "react-router-dom";
 import tccPantysImg from "@/assets/tcc-pantys.jpg";
 import conicImg from "@/assets/conic-research.jpg";
@@ -20,7 +20,22 @@ const caseStudies = [
     ],
     icon: ShoppingCart,
     color: "bg-primary",
-    type: "internal" as const,
+  },
+  {
+    id: "soc-store",
+    tag: "SOC Store · Marketplace",
+    title: "Otimização de conversão e experiência na SOC Store",
+    description:
+      "Estratégia de growth e otimização da jornada do usuário em marketplace de treinamentos para profissionais de SST — com foco em CRM, integração de plataformas e retenção.",
+    skills: ["CRM & Automação", "Growth", "Integração de Sistemas", "UX", "Retenção"],
+    metrics: [
+      { value: "+20%", label: "aumento em conversões" },
+      { value: "+10%", label: "aumento em retenção" },
+      { value: "LMS", label: "integração Konviva" },
+      { value: "HubSpot", label: "fluxos de CRM" },
+    ],
+    icon: Store,
+    color: "bg-primary",
   },
 ];
 
@@ -62,13 +77,13 @@ const CaseStudies = () => {
           transition={{ duration: 0.7 }}
         >
           <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">
-            Case Studies
+            Projetos
           </p>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
             Projetos <span className="italic font-medium">em destaque</span>
           </h2>
           <p className="font-body text-muted-foreground text-lg max-w-2xl mb-16">
-            Trabalhos práticos que demonstram minha atuação em Product Marketing — da descoberta à análise de resultados.
+            Aqui estão alguns dos projetos onde atuei com foco em estratégia, execução e resultado.
           </p>
         </motion.div>
 
@@ -150,7 +165,6 @@ const CaseStudies = () => {
                 rel="noopener noreferrer"
                 className="group block rounded-2xl border border-border bg-card hover:border-primary/40 transition-all overflow-hidden h-full"
               >
-                {/* Image */}
                 <div className="relative overflow-hidden h-44">
                   <img
                     src={project.image}
@@ -165,7 +179,6 @@ const CaseStudies = () => {
                   </div>
                 </div>
 
-                {/* Content */}
                 <div className="p-6">
                   <span className="font-body text-xs uppercase tracking-widest text-primary font-semibold">
                     {project.tag}

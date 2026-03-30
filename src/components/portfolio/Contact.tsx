@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Phone, ExternalLink } from "lucide-react";
+import { Mail, Linkedin, Phone } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -16,8 +16,7 @@ const Contact = () => {
             Vamos <span className="italic font-medium">conversar?</span>
           </h2>
           <p className="font-body text-secondary-foreground/70 max-w-lg mx-auto mb-12">
-            Estou em busca de novas oportunidades em Product Marketing.
-            Vamos trocar uma ideia sobre como posso agregar ao seu time.
+            Se você busca alguém que pensa além da execução e atua com foco em crescimento e produto:
           </p>
         </motion.div>
 
@@ -33,7 +32,7 @@ const Contact = () => {
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-body text-sm font-semibold hover:opacity-90 transition-opacity"
           >
             <Mail className="w-4 h-4" />
-            gabriellecontato@outlook.com.br
+            Email
           </a>
           <a
             href="https://www.linkedin.com/in/gabriellecaetano/"
@@ -44,17 +43,15 @@ const Contact = () => {
             <Linkedin className="w-4 h-4" />
             LinkedIn
           </a>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-8 flex items-center justify-center gap-2 font-body text-xs text-secondary-foreground/40"
-        >
-          <Phone className="w-3 h-3" />
-          +55 (13) 99161-5732
+          <a
+            href="https://wa.me/5513991615732"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 border border-secondary-foreground/20 text-secondary-foreground px-8 py-3.5 rounded-full font-body text-sm font-medium hover:bg-secondary-foreground/10 transition-colors"
+          >
+            <Phone className="w-4 h-4" />
+            WhatsApp
+          </a>
         </motion.div>
       </div>
     </section>
