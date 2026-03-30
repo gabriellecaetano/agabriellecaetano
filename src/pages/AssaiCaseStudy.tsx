@@ -53,6 +53,10 @@ const phases = [
       "Iterações no design baseadas em feedback direto dos testes.",
       "Construção do MVP funcional na plataforma Adalo.",
     ],
+    links: [
+      { label: "Ver protótipo no Figma", url: "https://www.figma.com/proto/TfXQVQmtzir905VLL36tzs/Estudos?page-id=153%3A530&node-id=153-532&p=f&viewport=57%2C69%2C0.31&t=er1tikfKhi7mYVPr-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=153%3A532" },
+      { label: "Testar MVP no Adalo", url: "https://postechfiapfase3.adalo.com/assa-app" },
+    ],
     highlight: "Principais ajustes: simplificação do fluxo de troca de pontos e melhoria na hierarquia visual das ofertas.",
   },
   {
