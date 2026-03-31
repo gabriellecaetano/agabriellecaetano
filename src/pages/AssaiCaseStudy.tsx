@@ -301,42 +301,90 @@ const AssaiCaseStudy = () => {
         </div>
       </section>
 
-      {/* Funnel Visualization */}
+      {/* Funnel & Charts Visualization */}
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">Resultados</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12">
-              Funil de <span className="italic font-medium">conversão</span>
+              Dados <span className="italic font-medium">do projeto</span>
             </h2>
 
-            <div className="space-y-3 max-w-2xl">
-              {funnelData.map((step, i) => (
-                <motion.div
-                  key={step.label}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="relative"
-                >
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="font-body text-sm font-medium text-foreground">{step.label}</span>
-                    <span className="font-body text-sm text-muted-foreground">{step.value} ({step.pct})</span>
-                  </div>
-                  <div className="h-8 bg-muted rounded-lg overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-10">
+              {/* Funnel Chart */}
+              <div>
+                <h3 className="font-display text-xl font-bold text-foreground mb-6">Funil de conversão</h3>
+                <div className="space-y-3">
+                  {funnelData.map((step, i) => (
                     <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${(step.value / 500) * 100}%` }}
+                      key={step.label}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: i * 0.15 }}
-                      className="h-full bg-primary/80 rounded-lg flex items-center justify-end pr-3"
+                      transition={{ duration: 0.5, delay: i * 0.1 }}
+                      className="relative"
                     >
-                      <span className="font-body text-xs font-bold text-primary-foreground">{step.pct}</span>
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="font-body text-sm font-medium text-foreground">{step.label}</span>
+                        <span className="font-body text-sm text-muted-foreground">{step.value} ({step.pct})</span>
+                      </div>
+                      <div className="h-8 bg-muted rounded-lg overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${(step.value / 500) * 100}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.8, delay: i * 0.15 }}
+                          className="h-full bg-primary/80 rounded-lg flex items-center justify-end pr-3"
+                        >
+                          <span className="font-body text-xs font-bold text-primary-foreground">{step.pct}</span>
+                        </motion.div>
+                      </div>
                     </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* NPS Visual Chart */}
+              <div>
+                <h3 className="font-display text-xl font-bold text-foreground mb-6">NPS Score</h3>
+                <div className="flex items-center justify-center">
+                  <div className="relative w-48 h-48">
+                    <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                      <circle cx="50" cy="50" r="40" fill="none" stroke="hsl(var(--muted))" strokeWidth="12" />
+                      <motion.circle
+                        cx="50" cy="50" r="40" fill="none"
+                        stroke="hsl(var(--primary))"
+                        strokeWidth="12"
+                        strokeDasharray={`${40 * 2 * Math.PI * 0.4} ${40 * 2 * Math.PI}`}
+                        strokeLinecap="round"
+                        initial={{ strokeDashoffset: 40 * 2 * Math.PI }}
+                        whileInView={{ strokeDashoffset: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1.2 }}
+                      />
+                    </svg>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center">
+                      <span className="font-display text-3xl font-bold text-foreground">+20</span>
+                      <span className="font-body text-xs text-muted-foreground">NPS Score</span>
+                    </div>
                   </div>
-                </motion.div>
-              ))}
+                </div>
+                <div className="flex justify-center gap-6 mt-6">
+                  {[
+                    { label: "Promotores", value: "40%", color: "bg-primary" },
+                    { label: "Neutros", value: "40%", color: "bg-muted-foreground/30" },
+                    { label: "Detratores", value: "20%", color: "bg-destructive/60" },
+                  ].map((seg) => (
+                    <div key={seg.label} className="flex items-center gap-2">
+                      <div className={`w-3 h-3 rounded-full ${seg.color}`} />
+                      <div>
+                        <p className="font-body text-xs font-semibold text-foreground">{seg.value}</p>
+                        <p className="font-body text-xs text-muted-foreground">{seg.label}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </Section>
         </div>
