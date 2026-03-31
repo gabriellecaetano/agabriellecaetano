@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, ShoppingCart, Users, Search, Lightbulb, Rocket, BarChart3, Target, TrendingUp, MessageSquare, ChevronRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import assaiAppPreview from "@/assets/assai-app-preview.jpg";
 
 const Section = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
   <motion.div
@@ -241,46 +242,55 @@ const AssaiCaseStudy = () => {
                     </div>
 
                     {phase.links && phase.links.length > 0 && (
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                        {phase.links.map((link) => (
-                          <a
-                            key={link.url}
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group block rounded-2xl border border-border bg-background overflow-hidden hover:border-primary/40 hover:shadow-lg transition-all"
-                          >
-                            <div className="aspect-video bg-muted flex items-center justify-center relative overflow-hidden">
-                              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/15" />
-                              <div className="relative flex flex-col items-center gap-3">
+                      <div className="mt-6 space-y-6">
+                        {/* App Preview */}
+                        <div className="rounded-2xl border border-border bg-background overflow-hidden">
+                          <div className="p-4 border-b border-border">
+                            <p className="font-body text-xs uppercase tracking-widest text-primary font-semibold">Preview do App</p>
+                          </div>
+                          <div className="p-6 flex justify-center bg-muted/30">
+                            <img
+                              src={assaiAppPreview}
+                              alt="Preview do app PontoAí - Assaí Atacadista"
+                              loading="lazy"
+                              width={512}
+                              height={1024}
+                              className="w-48 md:w-56 rounded-2xl shadow-lg"
+                            />
+                          </div>
+                        </div>
+
+                        {/* Links */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {phase.links.map((link) => (
+                            <a
+                              key={link.url}
+                              href={link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="group flex items-center gap-3 p-4 rounded-xl border border-border bg-background hover:border-primary/40 hover:shadow-md transition-all"
+                            >
+                              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                                 {link.label.includes("Figma") ? (
-                                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
-                                    <svg viewBox="0 0 38 57" className="w-6 h-8" fill="none">
-                                      <path d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z" fill="hsl(var(--primary))"/>
-                                      <path d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z" fill="hsl(var(--primary))" opacity="0.4"/>
-                                      <path d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z" fill="hsl(var(--primary))" opacity="0.6"/>
-                                      <path d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z" fill="hsl(var(--primary))" opacity="0.8"/>
-                                      <path d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z" fill="hsl(var(--primary))" opacity="0.6"/>
-                                    </svg>
-                                  </div>
+                                  <svg viewBox="0 0 38 57" className="w-5 h-6" fill="none">
+                                    <path d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z" fill="hsl(var(--primary))"/>
+                                    <path d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z" fill="hsl(var(--primary))" opacity="0.4"/>
+                                    <path d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z" fill="hsl(var(--primary))" opacity="0.6"/>
+                                    <path d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z" fill="hsl(var(--primary))" opacity="0.8"/>
+                                    <path d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z" fill="hsl(var(--primary))" opacity="0.6"/>
+                                  </svg>
                                 ) : (
-                                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
-                                    <Rocket className="w-7 h-7 text-primary" />
-                                  </div>
+                                  <Rocket className="w-5 h-5 text-primary" />
                                 )}
-                                <span className="font-body text-xs text-muted-foreground uppercase tracking-widest">
-                                  {link.label.includes("Figma") ? "Protótipo Interativo" : "MVP Funcional"}
-                                </span>
                               </div>
-                            </div>
-                            <div className="p-4 flex items-center justify-between">
-                              <span className="font-body text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
-                                {link.label}
-                              </span>
+                              <div className="flex-1">
+                                <p className="font-body text-sm font-semibold text-foreground group-hover:text-primary transition-colors">{link.label}</p>
+                                <p className="font-body text-xs text-muted-foreground">{link.label.includes("Figma") ? "Protótipo interativo" : "MVP funcional"}</p>
+                              </div>
                               <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
-                            </div>
-                          </a>
-                        ))}
+                            </a>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
@@ -291,42 +301,90 @@ const AssaiCaseStudy = () => {
         </div>
       </section>
 
-      {/* Funnel Visualization */}
+      {/* Funnel & Charts Visualization */}
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">Resultados</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12">
-              Funil de <span className="italic font-medium">conversão</span>
+              Dados <span className="italic font-medium">do projeto</span>
             </h2>
 
-            <div className="space-y-3 max-w-2xl">
-              {funnelData.map((step, i) => (
-                <motion.div
-                  key={step.label}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="relative"
-                >
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="font-body text-sm font-medium text-foreground">{step.label}</span>
-                    <span className="font-body text-sm text-muted-foreground">{step.value} ({step.pct})</span>
-                  </div>
-                  <div className="h-8 bg-muted rounded-lg overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-10">
+              {/* Funnel Chart */}
+              <div>
+                <h3 className="font-display text-xl font-bold text-foreground mb-6">Funil de conversão</h3>
+                <div className="space-y-3">
+                  {funnelData.map((step, i) => (
                     <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${(step.value / 500) * 100}%` }}
+                      key={step.label}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: i * 0.15 }}
-                      className="h-full bg-primary/80 rounded-lg flex items-center justify-end pr-3"
+                      transition={{ duration: 0.5, delay: i * 0.1 }}
+                      className="relative"
                     >
-                      <span className="font-body text-xs font-bold text-primary-foreground">{step.pct}</span>
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="font-body text-sm font-medium text-foreground">{step.label}</span>
+                        <span className="font-body text-sm text-muted-foreground">{step.value} ({step.pct})</span>
+                      </div>
+                      <div className="h-8 bg-muted rounded-lg overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${(step.value / 500) * 100}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.8, delay: i * 0.15 }}
+                          className="h-full bg-primary/80 rounded-lg flex items-center justify-end pr-3"
+                        >
+                          <span className="font-body text-xs font-bold text-primary-foreground">{step.pct}</span>
+                        </motion.div>
+                      </div>
                     </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* NPS Visual Chart */}
+              <div>
+                <h3 className="font-display text-xl font-bold text-foreground mb-6">NPS Score</h3>
+                <div className="flex items-center justify-center">
+                  <div className="relative w-48 h-48">
+                    <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                      <circle cx="50" cy="50" r="40" fill="none" stroke="hsl(var(--muted))" strokeWidth="12" />
+                      <motion.circle
+                        cx="50" cy="50" r="40" fill="none"
+                        stroke="hsl(var(--primary))"
+                        strokeWidth="12"
+                        strokeDasharray={`${40 * 2 * Math.PI * 0.4} ${40 * 2 * Math.PI}`}
+                        strokeLinecap="round"
+                        initial={{ strokeDashoffset: 40 * 2 * Math.PI }}
+                        whileInView={{ strokeDashoffset: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1.2 }}
+                      />
+                    </svg>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center">
+                      <span className="font-display text-3xl font-bold text-foreground">+20</span>
+                      <span className="font-body text-xs text-muted-foreground">NPS Score</span>
+                    </div>
                   </div>
-                </motion.div>
-              ))}
+                </div>
+                <div className="flex justify-center gap-6 mt-6">
+                  {[
+                    { label: "Promotores", value: "40%", color: "bg-primary" },
+                    { label: "Neutros", value: "40%", color: "bg-muted-foreground/30" },
+                    { label: "Detratores", value: "20%", color: "bg-destructive/60" },
+                  ].map((seg) => (
+                    <div key={seg.label} className="flex items-center gap-2">
+                      <div className={`w-3 h-3 rounded-full ${seg.color}`} />
+                      <div>
+                        <p className="font-body text-xs font-semibold text-foreground">{seg.value}</p>
+                        <p className="font-body text-xs text-muted-foreground">{seg.label}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </Section>
         </div>

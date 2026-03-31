@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ShoppingCart, ExternalLink, BookOpen, Microscope, Store } from "lucide-react";
+import { ArrowRight, ShoppingCart, ExternalLink, BookOpen, Store } from "lucide-react";
 import { Link } from "react-router-dom";
 import tccPantysImg from "@/assets/tcc-pantys.jpg";
-import conicImg from "@/assets/conic-research.jpg";
 
 const caseStudies = [
   {
@@ -24,9 +23,9 @@ const caseStudies = [
   {
     id: "soc-store",
     tag: "SOC Store · Marketplace",
-    title: "Otimização de conversão e experiência na SOC Store",
+    title: "Aumento de conversão e retenção através da otimização da jornada na SOC Store",
     description:
-      "Estratégia de growth e otimização da jornada do usuário em marketplace de treinamentos para profissionais de SST — com foco em CRM, integração de plataformas e retenção.",
+      "Otimização da jornada do usuário em marketplace de SST — atuando na interseção entre marketing, produto e experiência, com foco em CRM, integração de sistemas e crescimento.",
     skills: ["CRM & Automação", "Growth", "Integração de Sistemas", "UX", "Retenção"],
     metrics: [
       { value: "+20%", label: "aumento em conversões" },
@@ -51,18 +50,6 @@ const academicProjects = [
     link: "https://www.behance.net/gallery/166317995/Trabalho-de-Conclusao-de-Curso-Pantys",
     linkLabel: "Ver no Behance",
     metric: { value: "410", label: "respostas na pesquisa" },
-  },
-  {
-    title: "CONIC — Pesquisa Científica sobre Marketing Sustentável",
-    tag: "Congresso Nacional de Iniciação Científica",
-    image: conicImg,
-    icon: Microscope,
-    description:
-      "Apresentação de pesquisa no CONIC investigando hábitos de consumo menstrual, conhecimento sobre produtos alternativos sustentáveis e barreiras de adoção — combinando pesquisa quantitativa e qualitativa.",
-    skills: ["Pesquisa Científica", "Comportamento do Consumidor", "Marketing Sustentável"],
-    link: "https://drive.google.com/file/d/119MSpeQs__zX_NSZZolnxG1n38ShYaWi/view",
-    linkLabel: "Ver artigo completo",
-    metric: { value: "CONIC", label: "congresso nacional" },
   },
 ];
 
