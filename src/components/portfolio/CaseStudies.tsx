@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ShoppingCart, ExternalLink, BookOpen, Microscope, Store } from "lucide-react";
+import { ArrowRight, ShoppingCart, ExternalLink, BookOpen, Store } from "lucide-react";
 import { Link } from "react-router-dom";
 import tccPantysImg from "@/assets/tcc-pantys.jpg";
-import conicImg from "@/assets/conic-research.jpg";
 
 const caseStudies = [
   {
