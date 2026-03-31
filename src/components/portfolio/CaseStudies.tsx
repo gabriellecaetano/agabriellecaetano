@@ -23,9 +23,9 @@ const caseStudies = [
   {
     id: "soc-store",
     tag: "SOC Store · Marketplace",
-    title: "Otimização de conversão e experiência na SOC Store",
+    title: "Aumento de conversão e retenção através da otimização da jornada na SOC Store",
     description:
-      "Estratégia de growth e otimização da jornada do usuário em marketplace de treinamentos para profissionais de SST — com foco em CRM, integração de plataformas e retenção.",
+      "Otimização da jornada do usuário em marketplace de SST — atuando na interseção entre marketing, produto e experiência, com foco em CRM, integração de sistemas e crescimento.",
     skills: ["CRM & Automação", "Growth", "Integração de Sistemas", "UX", "Retenção"],
     metrics: [
       { value: "+20%", label: "aumento em conversões" },
