@@ -52,18 +52,6 @@ const academicProjects = [
     linkLabel: "Ver no Behance",
     metric: { value: "410", label: "respostas na pesquisa" },
   },
-  {
-    title: "CONIC — Pesquisa Científica sobre Marketing Sustentável",
-    tag: "Congresso Nacional de Iniciação Científica",
-    image: conicImg,
-    icon: Microscope,
-    description:
-      "Apresentação de pesquisa no CONIC investigando hábitos de consumo menstrual, conhecimento sobre produtos alternativos sustentáveis e barreiras de adoção — combinando pesquisa quantitativa e qualitativa.",
-    skills: ["Pesquisa Científica", "Comportamento do Consumidor", "Marketing Sustentável"],
-    link: "https://drive.google.com/file/d/119MSpeQs__zX_NSZZolnxG1n38ShYaWi/view",
-    linkLabel: "Ver artigo completo",
-    metric: { value: "CONIC", label: "congresso nacional" },
-  },
 ];
 
 const CaseStudies = () => {
