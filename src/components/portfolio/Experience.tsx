@@ -57,65 +57,60 @@ const experiences = [
 const Experience = () => {
   return (
     <section id="experiencia" className="py-24 md:py-32 bg-card/50">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">Trajetória</p>
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-16 leading-tight">
+          <p className="font-body text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3">Trajetória</p>
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-14 leading-tight">
             Experiência <span className="italic font-medium">profissional</span>
           </h2>
         </motion.div>
 
         <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-border" />
+          <div className="absolute left-0 md:left-6 top-0 bottom-0 w-px bg-border" />
 
-          <div className="space-y-12">
+          <div className="space-y-10">
             {experiences.map((exp, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="relative pl-8 md:pl-20"
+                transition={{ duration: 0.6, delay: i * 0.08 }}
+                className="relative pl-8 md:pl-16"
               >
-                {/* Timeline dot */}
                 <div
-                  className={`absolute left-0 md:left-8 top-2 w-3 h-3 rounded-full -translate-x-[6px] border-2 ${
+                  className={`absolute left-0 md:left-6 top-2 w-2.5 h-2.5 rounded-full -translate-x-[5px] border-2 ${
                     exp.current
                       ? "bg-primary border-primary"
                       : "bg-background border-muted-foreground/40"
                   }`}
                 />
 
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-3">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-2">
                   <div>
-                    <h3 className="font-body font-bold text-lg text-foreground">{exp.role}</h3>
-                    <p className="font-body text-primary font-medium">{exp.company} · {exp.location}</p>
+                    <h3 className="font-body font-bold text-foreground">{exp.role}</h3>
+                    <p className="font-body text-sm text-primary font-medium">{exp.company} · {exp.location}</p>
                   </div>
-                  <span className="font-body text-sm text-muted-foreground whitespace-nowrap">{exp.period}</span>
+                  <span className="font-body text-xs text-muted-foreground whitespace-nowrap">{exp.period}</span>
                 </div>
 
-                <ul className="space-y-2 mb-4">
+                <ul className="space-y-1.5 mb-3">
                   {exp.bullets.map((bullet, j) => (
                     <li key={j} className="font-body text-sm text-muted-foreground leading-relaxed flex gap-2">
-                      <span className="text-primary mt-1.5 flex-shrink-0">·</span>
+                      <span className="text-primary mt-1 flex-shrink-0">·</span>
                       {bullet}
                     </li>
                   ))}
                 </ul>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5">
                   {exp.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="font-body text-xs px-3 py-1 rounded-full bg-accent text-accent-foreground"
-                    >
+                    <span key={tag} className="font-body text-xs px-2.5 py-1 rounded-lg bg-accent text-accent-foreground">
                       {tag}
                     </span>
                   ))}

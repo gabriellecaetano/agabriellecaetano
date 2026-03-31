@@ -38,37 +38,37 @@ const extras = [
 const Education = () => {
   return (
     <section id="educacao" className="py-24 md:py-32 bg-card/50">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">Formação</p>
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-16 leading-tight">
+          <p className="font-body text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3">Formação</p>
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-14 leading-tight">
             Educação <span className="italic font-medium">& certificações</span>
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
           {education.map((edu, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="p-6 rounded-2xl border border-border bg-background hover:border-primary/30 transition-colors"
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className="p-5 rounded-2xl border border-border bg-background hover:border-primary/30 transition-colors"
             >
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center text-accent-foreground flex-shrink-0">
-                  <edu.icon className="w-5 h-5" />
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-xl bg-accent flex items-center justify-center text-accent-foreground flex-shrink-0">
+                  <edu.icon className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="font-body font-bold text-foreground text-sm mb-1">{edu.degree}</h3>
+                  <h3 className="font-body font-bold text-foreground text-sm mb-0.5">{edu.degree}</h3>
                   <p className="font-body text-sm text-primary">{edu.school}</p>
-                  <p className="font-body text-xs text-muted-foreground mt-1">{edu.period}</p>
+                  <p className="font-body text-xs text-muted-foreground mt-0.5">{edu.period}</p>
                 </div>
               </div>
             </motion.div>
@@ -81,13 +81,13 @@ const Education = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="font-body font-bold text-foreground mb-4 flex items-center gap-2">
-            <span className="w-8 h-px bg-primary" />
+          <h3 className="font-body font-bold text-foreground text-sm mb-4 flex items-center gap-2">
+            <span className="w-6 h-px bg-primary" />
             Cursos & Extras
           </h3>
           <div className="flex flex-wrap gap-2">
             {extras.map((item) => (
-              <span key={item} className="font-body text-xs px-3 py-1.5 rounded-full bg-muted text-muted-foreground">
+              <span key={item} className="font-body text-xs px-3 py-1.5 rounded-lg bg-muted text-muted-foreground">
                 {item}
               </span>
             ))}
