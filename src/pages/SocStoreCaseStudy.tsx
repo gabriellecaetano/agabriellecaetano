@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Store, ChevronRight, Mail, Settings, Users, TrendingUp } from "lucide-react";
+import { ArrowLeft, Store, ChevronRight, Mail, Settings, Users, TrendingUp, Compass, FlaskConical, Lightbulb, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Section = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
@@ -13,45 +13,6 @@ const Section = ({ children, className = "" }: { children: React.ReactNode; clas
     {children}
   </motion.div>
 );
-
-const actions = [
-  {
-    num: "01",
-    title: "CRM e automação",
-    icon: Mail,
-    items: [
-      "Estruturação de fluxos de e-mail no HubSpot",
-      "Nutrição de leads com base no comportamento",
-    ],
-  },
-  {
-    num: "02",
-    title: "Experiência do usuário",
-    icon: Users,
-    items: [
-      "Mapeamento da jornada",
-      "Identificação de pontos de fricção",
-    ],
-  },
-  {
-    num: "03",
-    title: "Integração de sistemas",
-    icon: Settings,
-    items: [
-      "Integração da plataforma LMS (Konviva)",
-      "Integração com meio de pagamento (Safe2Pay)",
-    ],
-  },
-  {
-    num: "04",
-    title: "Estratégia de aquisição e retenção",
-    icon: TrendingUp,
-    items: [
-      "Ajustes na comunicação",
-      "Melhoria na experiência pós-compra",
-    ],
-  },
-];
 
 const SocStoreCaseStudy = () => {
   return (
@@ -81,16 +42,15 @@ const SocStoreCaseStudy = () => {
             </div>
 
             <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground leading-[1.05] mb-6">
-              Otimização de conversão e experiência na{" "}
+              Aumento de conversão e retenção através da otimização da jornada e integração de sistemas na{" "}
               <span className="italic font-medium text-primary">SOC Store</span>
             </h1>
 
-            <p className="font-body text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed mb-10">
-              A SOC Store é um marketplace de treinamentos e serviços voltado para profissionais de SST.
-              O desafio era melhorar a conversão de usuários na plataforma, a experiência de compra e a integração entre sistemas.
+            <p className="font-body text-base md:text-lg text-muted-foreground max-w-3xl leading-relaxed mb-4">
+              Atuei como ponte entre marketing, produto e experiência do usuário, com foco em crescimento e otimização de funil.
             </p>
 
-            <div className="flex flex-wrap gap-6 font-body text-sm text-muted-foreground">
+            <div className="flex flex-wrap gap-6 font-body text-sm text-muted-foreground mt-8">
               <div><span className="text-foreground font-semibold">Papel:</span> Analista de Marketing de Produto</div>
               <div><span className="text-foreground font-semibold">Foco:</span> Growth, CRM & Integração</div>
               <div><span className="text-foreground font-semibold">Ferramentas:</span> HubSpot, Konviva, Safe2Pay, GA</div>
@@ -104,7 +64,7 @@ const SocStoreCaseStudy = () => {
         <div className="bg-secondary text-secondary-foreground">
           <div className="max-w-5xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: "+20%", label: "Aumento em conversões" },
+              { value: "+20%", label: "Aumento na taxa de conversão" },
               { value: "+10%", label: "Aumento em retenção" },
               { value: "LMS", label: "Integração Konviva" },
               { value: "CRM", label: "Fluxos HubSpot" },
@@ -118,60 +78,157 @@ const SocStoreCaseStudy = () => {
         </div>
       </Section>
 
-      {/* Problem */}
+      {/* Contexto */}
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">O Problema</h2>
-                <p className="font-body text-muted-foreground leading-relaxed mb-4">
-                  A jornada do usuário apresentava fricções: baixa conversão em etapas do funil,
-                  experiência fragmentada entre plataformas e falta de automação no relacionamento com leads.
-                </p>
-                <p className="font-body text-muted-foreground leading-relaxed">
-                  Isso impactava diretamente receita, retenção e experiência do usuário.
-                </p>
-              </div>
-              <div>
-                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">O Objetivo</h2>
-                <ul className="space-y-3">
-                  {[
-                    "Aumentar a taxa de conversão",
-                    "Melhorar a experiência do usuário",
-                    "Criar uma jornada mais fluida e integrada",
-                    "Fortalecer retenção e relacionamento",
-                  ].map((item) => (
-                    <li key={item} className="font-body text-muted-foreground flex items-start gap-2">
-                      <ChevronRight className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">Contexto</h2>
+            <p className="font-body text-muted-foreground leading-relaxed mb-4 max-w-3xl">
+              A SOC Store é um marketplace de treinamentos e serviços voltado para profissionais de SST, com modelo de receita baseado em venda direta de cursos.
+            </p>
+            <p className="font-body text-muted-foreground leading-relaxed max-w-3xl">
+              Apesar de um fluxo estruturado de aquisição, existiam sinais de ineficiência ao longo da jornada do usuário, impactando diretamente a conversão e retenção.
+            </p>
+          </Section>
+        </div>
+      </section>
+
+      {/* Problema */}
+      <section className="py-16 bg-card/50">
+        <div className="max-w-5xl mx-auto px-6">
+          <Section>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6">O Problema</h2>
+            <p className="font-body text-muted-foreground leading-relaxed mb-6">
+              A análise da jornada revelou três principais gargalos:
+            </p>
+            <ul className="space-y-3 mb-8">
+              {[
+                "Queda de usuários ao longo do funil de compra",
+                "Experiência fragmentada entre plataformas (LMS e pagamento)",
+                "Baixa ativação e retenção após a conversão",
+              ].map((item) => (
+                <li key={item} className="font-body text-muted-foreground flex items-start gap-2">
+                  <ChevronRight className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div className="p-5 rounded-xl border border-border bg-background">
+              <p className="font-body text-sm font-semibold text-foreground mb-2">Impacto direto:</p>
+              <div className="flex flex-wrap gap-4">
+                {["Perda de receita", "Baixa eficiência de aquisição", "Menor LTV dos usuários"].map((item) => (
+                  <span key={item} className="font-body text-sm text-muted-foreground flex items-center gap-1.5">
+                    <span className="text-primary font-bold">→</span> {item}
+                  </span>
+                ))}
               </div>
             </div>
           </Section>
         </div>
       </section>
 
-      {/* Actions */}
+      {/* Hipóteses */}
+      <section className="py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <Section>
+            <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">Análise</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8">
+              Hipóteses
+            </h2>
+            <p className="font-body text-muted-foreground leading-relaxed mb-6">
+              A partir dos dados e comportamento dos usuários, levantei as seguintes hipóteses:
+            </p>
+            <div className="space-y-4">
+              {[
+                "A fricção entre plataformas estava reduzindo a conversão no momento de compra",
+                "A ausência de comunicação estruturada impactava ativação e retenção",
+                "A jornada não guiava o usuário de forma clara até a conclusão da compra",
+              ].map((h, i) => (
+                <div key={i} className="flex gap-4 p-5 rounded-xl border border-border bg-card">
+                  <span className="font-display text-2xl font-bold text-primary/30">{String(i + 1).padStart(2, '0')}</span>
+                  <p className="font-body text-muted-foreground leading-relaxed pt-1">{h}</p>
+                </div>
+              ))}
+            </div>
+          </Section>
+        </div>
+      </section>
+
+      {/* Estratégia */}
       <section className="py-16 bg-card/50">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
-            <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">Ação</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-16">
-              O que <span className="italic font-medium">eu fiz</span>
+            <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">Abordagem</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12">
+              Estratégia
             </h2>
+            <p className="font-body text-muted-foreground leading-relaxed mb-8">
+              Defini uma abordagem focada em três pilares:
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { title: "Redução de fricção na jornada", desc: "Tornar o fluxo mais contínuo e intuitivo" },
+                { title: "Aumento de ativação", desc: "Garantir que o usuário avance após a conversão" },
+                { title: "Retenção via relacionamento", desc: "Estruturar comunicação contínua com o usuário" },
+              ].map((p, i) => (
+                <div key={i} className="p-6 rounded-2xl border border-border bg-background">
+                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-body text-sm font-bold mb-4">
+                    {String(i + 1).padStart(2, '0')}
+                  </div>
+                  <h3 className="font-body font-bold text-foreground mb-2">{p.title}</h3>
+                  <p className="font-body text-sm text-muted-foreground">{p.desc}</p>
+                </div>
+              ))}
+            </div>
+          </Section>
+        </div>
+      </section>
+
+      {/* Execução */}
+      <section className="py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <Section>
+            <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">Ação</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Execução
+            </h2>
+            <p className="font-body text-muted-foreground leading-relaxed mb-12">
+              Atuei de ponta a ponta, conectando marketing, produto e experiência:
+            </p>
           </Section>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {actions.map((action, i) => (
-              <Section key={action.num}>
-                <div className="p-6 rounded-2xl border border-border bg-background h-full">
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                icon: Mail,
+                title: "Reestruturação de CRM",
+                items: [
+                  "Criação de fluxos automatizados no HubSpot",
+                  "Segmentação baseada em comportamento",
+                  "Nutrição de leads ao longo do funil",
+                ],
+              },
+              {
+                icon: Settings,
+                title: "Integração de sistemas",
+                items: [
+                  "Integração entre LMS (Konviva) e pagamento (Safe2Pay)",
+                  "Redução de etapas e inconsistências na jornada",
+                ],
+              },
+              {
+                icon: Compass,
+                title: "Otimização da jornada",
+                items: [
+                  "Mapeamento completo da experiência do usuário",
+                  "Identificação e priorização de pontos de fricção",
+                  "Ajustes na comunicação e fluxo de navegação",
+                ],
+              },
+            ].map((action, i) => (
+              <Section key={i}>
+                <div className="p-6 rounded-2xl border border-border bg-card h-full">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-body text-sm font-bold">
-                      {action.num}
-                    </div>
                     <action.icon className="w-5 h-5 text-primary" />
                     <h3 className="font-display text-lg font-bold text-foreground">{action.title}</h3>
                   </div>
@@ -190,7 +247,40 @@ const SocStoreCaseStudy = () => {
         </div>
       </section>
 
-      {/* Results */}
+      {/* Experimentação */}
+      <section className="py-16 bg-card/50">
+        <div className="max-w-5xl mx-auto px-6">
+          <Section>
+            <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">Testes</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8">
+              Experimentação
+            </h2>
+            <p className="font-body text-muted-foreground leading-relaxed mb-6">
+              Durante o processo, foram realizados testes como:
+            </p>
+            <ul className="space-y-3 mb-6">
+              {[
+                "Ajustes na comunicação dos e-mails (copy e timing)",
+                "Mudanças em pontos críticos da jornada",
+                "Iterações nos fluxos de nutrição",
+              ].map((item) => (
+                <li key={item} className="font-body text-muted-foreground flex items-start gap-2">
+                  <ChevronRight className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div className="p-4 rounded-xl bg-accent/50 border border-primary/10">
+              <p className="font-body text-sm text-accent-foreground">
+                <span className="font-semibold">Foco sempre em: </span>
+                impacto em conversão e retenção
+              </p>
+            </div>
+          </Section>
+        </div>
+      </section>
+
+      {/* Resultados */}
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
@@ -199,10 +289,10 @@ const SocStoreCaseStudy = () => {
               Impacto <span className="italic font-medium">gerado</span>
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-16">
+            <div className="grid md:grid-cols-2 gap-6 mb-10">
               {[
-                { value: "+20%", desc: "de aumento em conversões" },
-                { value: "+10%", desc: "de aumento em retenção" },
+                { value: "+20%", desc: "de aumento na taxa de conversão" },
+                { value: "+10%", desc: "de aumento na retenção" },
               ].map((r) => (
                 <div key={r.value} className="p-8 rounded-2xl bg-secondary text-secondary-foreground text-center">
                   <p className="font-display text-5xl font-bold mb-2">{r.value}</p>
@@ -213,8 +303,8 @@ const SocStoreCaseStudy = () => {
 
             <div className="space-y-3">
               {[
-                "Jornada mais fluida com integração de plataformas",
-                "Melhoria na experiência do usuário e redução de fricções",
+                "Redução de fricção na jornada com integração de sistemas",
+                "Aumento da eficiência da aquisição (melhor aproveitamento do tráfego)",
               ].map((item) => (
                 <div key={item} className="flex gap-3 p-4 rounded-xl border border-border bg-card">
                   <span className="text-primary font-bold">→</span>
@@ -226,7 +316,7 @@ const SocStoreCaseStudy = () => {
         </div>
       </section>
 
-      {/* Learnings */}
+      {/* Aprendizados */}
       <section className="py-20 bg-card/50">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
@@ -235,15 +325,16 @@ const SocStoreCaseStudy = () => {
               Aprendizados <span className="italic font-medium">estratégicos</span>
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {[
-                { title: "Jornada é conversão", text: "Pequenas melhorias na jornada geram grande impacto em conversão." },
-                { title: "Integração é UX", text: "Integração entre sistemas é crucial para experiência do usuário." },
-                { title: "CRM é retenção", text: "CRM bem estruturado aumenta retenção e LTV." },
-              ].map((l) => (
-                <div key={l.title} className="p-6 rounded-2xl border border-border bg-background">
-                  <h3 className="font-body font-bold text-foreground mb-3">{l.title}</h3>
-                  <p className="font-body text-sm text-muted-foreground leading-relaxed">{l.text}</p>
+                "Conversão não depende apenas de aquisição, mas da qualidade da jornada",
+                "Pequenas fricções acumuladas geram grande impacto em receita",
+                "CRM é uma alavanca direta de retenção e LTV",
+                "Integração entre sistemas é essencial para experiência consistente",
+              ].map((l, i) => (
+                <div key={i} className="flex gap-3 p-5 rounded-xl border border-border bg-background">
+                  <span className="text-primary font-bold mt-0.5">→</span>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed">{l}</p>
                 </div>
               ))}
             </div>
@@ -251,8 +342,37 @@ const SocStoreCaseStudy = () => {
         </div>
       </section>
 
-      {/* Tools */}
-      <section className="py-16">
+      {/* O que faria diferente */}
+      <section className="py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <Section>
+            <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">Reflexão</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              O que eu faria <span className="italic font-medium">diferente</span>
+            </h2>
+            <p className="font-body text-muted-foreground leading-relaxed mb-8">
+              Se tivesse mais tempo/recursos:
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                "Implementaria testes A/B estruturados em toda a jornada",
+                "Criaria dashboards de acompanhamento de funil em tempo real",
+                "Evoluiria a segmentação com base em comportamento avançado",
+                "Exploraria estratégias de upsell e cross-sell",
+              ].map((item, i) => (
+                <div key={i} className="flex gap-3 p-5 rounded-xl border border-border bg-card">
+                  <Lightbulb className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <p className="font-body text-sm text-muted-foreground">{item}</p>
+                </div>
+              ))}
+            </div>
+          </Section>
+        </div>
+      </section>
+
+      {/* Ferramentas */}
+      <section className="py-16 bg-card/50">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-6">Ferramentas utilizadas</p>
