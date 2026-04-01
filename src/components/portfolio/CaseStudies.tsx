@@ -4,6 +4,8 @@ import { ArrowRight, ShoppingCart, Store, ExternalLink, BookOpen } from "lucide-
 import { Link } from "react-router-dom";
 import CaseSlidePresentation, { type Persona, type SlideContent } from "./CaseSlidePresentation";
 import tccPantysImg from "@/assets/tcc-pantys.jpg";
+import caseAssaiCover from "@/assets/case-assai-cover.jpg";
+import caseSocCover from "@/assets/case-soc-cover.jpg";
 
 /* ── Assaí slides ── */
 const assaiSlides: SlideContent[] = [
