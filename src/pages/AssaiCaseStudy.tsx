@@ -250,7 +250,7 @@ const AssaiCaseStudy = () => {
                           </div>
                           <div className="p-6 flex justify-center bg-muted/30">
                             <img
-                              src={assaiAppPreview}
+                              src={pontoaiScreenshot}
                               alt="Preview do app PontoAí - Assaí Atacadista"
                               loading="lazy"
                               width={512}
