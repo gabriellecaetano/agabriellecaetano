@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Mail } from "lucide-react";
+import { ArrowDown, Mail, Linkedin } from "lucide-react";
 import gabriellePhoto from "@/assets/gabrielle-photo.jpg";
 
 const Hero = () => {
@@ -26,48 +26,28 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1] tracking-tight text-foreground mb-6"
+              className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight text-foreground mb-5"
             >
-              Marketing não é
+              Transformo estratégia
               <br />
-              sobre campanha.
-              <br />
-              <span className="italic font-medium text-primary">É sobre crescimento.</span>
+              de produto em{" "}
+              <span className="italic font-medium text-primary">crescimento mensurável.</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.25 }}
-              className="font-body text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed mb-8"
+              className="font-body text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed mb-10"
             >
-              Sou Gabrielle Caetano, Analista de Marketing com foco em produto, dados e estratégia.
-              Atuo conectando aquisição, retenção e experiência do usuário para gerar crescimento sustentável.
+              Product Marketing focada em PLG, Growth, Discovery e métricas de impacto.
+              Conecto aquisição, retenção e experiência do usuário para gerar resultados reais.
             </motion.p>
 
-            {/* Metrics strip */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.35 }}
-              className="flex gap-8 mb-10"
-            >
-              {[
-                { value: "+20%", label: "conversões" },
-                { value: "+10%", label: "retenção" },
-                { value: "SaaS", label: "& marketplace" },
-              ].map((m) => (
-                <div key={m.label} className="border-l-2 border-primary/30 pl-4">
-                  <p className="font-display text-2xl font-bold text-foreground">{m.value}</p>
-                  <p className="font-body text-xs text-muted-foreground">{m.label}</p>
-                </div>
-              ))}
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.45 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
               className="flex items-center gap-3"
             >
               <a
@@ -106,7 +86,7 @@ const Hero = () => {
         transition={{ duration: 1, delay: 1.2 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <a href="#sobre" className="text-muted-foreground hover:text-primary transition-colors">
+        <a href="#prova" className="text-muted-foreground hover:text-primary transition-colors">
           <ArrowDown className="w-5 h-5 animate-bounce" />
         </a>
       </motion.div>
