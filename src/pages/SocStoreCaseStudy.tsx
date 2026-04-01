@@ -391,10 +391,10 @@ const SocStoreCaseStudy = () => {
       <section className="py-16 bg-secondary text-secondary-foreground">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <p className="font-display text-2xl md:text-3xl font-bold mb-4">
-            Gostou do meu trabalho?
+            Vamos conversar sobre como posso gerar crescimento no seu produto?
           </p>
           <p className="font-body text-secondary-foreground/60 mb-8">
-            Vamos conversar sobre como posso contribuir para o seu time de Product Marketing.
+            Se você busca alguém que conecta estratégia, dados e execução para gerar impacto real.
           </p>
           <div className="flex items-center justify-center gap-4">
             <a
@@ -402,6 +402,14 @@ const SocStoreCaseStudy = () => {
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-body text-sm font-semibold hover:opacity-90 transition-opacity"
             >
               Entre em contato
+            </a>
+            <a
+              href="https://www.linkedin.com/in/gabriellecaetano/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-secondary-foreground/20 px-8 py-3.5 rounded-full font-body text-sm font-medium hover:bg-secondary-foreground/10 transition-colors"
+            >
+              LinkedIn
             </a>
             <Link
               to="/"
