@@ -392,6 +392,7 @@ const CaseStudies = () => {
       title: "PontoAí — Programa de fidelidade do Assaí Atacadista",
       description: "Concepção estratégica completa de uma feature de fidelidade para o app do Assaí: do discovery à análise de métricas.",
       icon: ShoppingCart,
+      cover: caseAssaiCover,
       link: "/case/assai-pontoai",
       slides: assaiSlides,
       metrics: [
@@ -405,6 +406,7 @@ const CaseStudies = () => {
       title: "Otimização da jornada e integração de sistemas na SOC Store",
       description: "Atuação na interseção entre marketing, produto e experiência, com foco em CRM, integração e crescimento.",
       icon: Store,
+      cover: caseSocCover,
       link: "/case/soc-store",
       slides: socStoreSlides,
       metrics: [
