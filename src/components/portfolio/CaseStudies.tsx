@@ -449,29 +449,39 @@ const CaseStudies = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className={`text-left p-6 rounded-2xl border transition-all ${
+              className={`text-left rounded-2xl border transition-all overflow-hidden ${
                 activeCase === cs.id
                   ? "border-primary bg-accent/30 shadow-md"
                   : "border-border bg-card hover:border-primary/30"
               }`}
             >
-              <div className="flex items-start justify-between mb-3">
-                <span className="font-body text-xs uppercase tracking-widest text-primary font-semibold">
-                  {cs.tag}
-                </span>
-                <cs.icon className="w-5 h-5 text-primary" />
+              <div className="h-36 md:h-44 w-full overflow-hidden">
+                <img
+                  src={cs.cover}
+                  alt={cs.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="font-display text-lg font-bold text-foreground mb-2 leading-snug">
-                {cs.title}
-              </h3>
-              <p className="font-body text-sm text-muted-foreground mb-4">{cs.description}</p>
-              <div className="flex gap-4">
-                {cs.metrics.map((m) => (
-                  <div key={m.label}>
-                    <span className="font-display text-xl font-bold text-foreground">{m.value}</span>
-                    <span className="font-body text-xs text-muted-foreground ml-1">{m.label}</span>
-                  </div>
-                ))}
+              <div className="p-6">
+                <div className="flex items-start justify-between mb-3">
+                  <span className="font-body text-xs uppercase tracking-widest text-primary font-semibold">
+                    {cs.tag}
+                  </span>
+                  <cs.icon className="w-5 h-5 text-primary" />
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground mb-2 leading-snug">
+                  {cs.title}
+                </h3>
+                <p className="font-body text-sm text-muted-foreground mb-4">{cs.description}</p>
+                <div className="flex gap-4">
+                  {cs.metrics.map((m) => (
+                    <div key={m.label}>
+                      <span className="font-display text-xl font-bold text-foreground">{m.value}</span>
+                      <span className="font-body text-xs text-muted-foreground ml-1">{m.label}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </motion.button>
           ))}
