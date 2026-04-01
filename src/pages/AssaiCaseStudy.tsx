@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, ShoppingCart, Users, Search, Lightbulb, Rocket, BarChart3, Target, TrendingUp, MessageSquare, ChevronRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
-import assaiAppPreview from "@/assets/assai-app-preview.jpg";
+import assaiAppPreview from "@/assets/assai-app-preview.png";
 
 const Section = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
   <motion.div
@@ -255,7 +255,7 @@ const AssaiCaseStudy = () => {
                               loading="lazy"
                               width={512}
                               height={1024}
-                              className="w-48 md:w-56 rounded-2xl shadow-lg"
+                              className="w-48 md:w-56 rounded-2xl shadow-lg text-left"
                             />
                           </div>
                         </div>
