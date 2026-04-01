@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Maximize2, Minimize2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize2, Minimize2, Linkedin, Mail } from "lucide-react";
 
 export type Persona = "pmm" | "growth" | "product";
 
@@ -21,6 +21,12 @@ const personaLabels: Record<Persona, string> = {
   product: "Product",
 };
 
+const personaDescriptions: Record<Persona, string> = {
+  pmm: "Visão de posicionamento e go-to-market",
+  growth: "Foco em métricas e otimização de funil",
+  product: "Perspectiva de produto e UX",
+};
+
 const CaseSlidePresentation = ({ slides, onViewFull }: CaseSlidePresentationProps) => {
   const [current, setCurrent] = useState(0);
   const [persona, setPersona] = useState<Persona>("pmm");
@@ -39,6 +45,7 @@ const CaseSlidePresentation = ({ slides, onViewFull }: CaseSlidePresentationProp
   const next = () => current < slides.length - 1 && goTo(current + 1);
 
   const slide = slides[current];
+  const isLastSlide = current === slides.length - 1;
 
   const variants = {
     enter: (d: number) => ({ x: d > 0 ? 80 : -80, opacity: 0 }),
@@ -60,6 +67,7 @@ const CaseSlidePresentation = ({ slides, onViewFull }: CaseSlidePresentationProp
                   ? "bg-primary text-primary-foreground border-primary"
                   : "border-border text-muted-foreground hover:border-primary/40 hover:text-foreground"
               }`}
+              title={personaDescriptions[p]}
             >
               {personaLabels[p]}
             </button>
@@ -79,16 +87,23 @@ const CaseSlidePresentation = ({ slides, onViewFull }: CaseSlidePresentationProp
         </div>
       </div>
 
-      {/* Progress bar */}
-      <div className={`flex gap-1.5 mb-6 ${expanded ? "px-8" : ""}`}>
-        {slides.map((_, i) => (
+      {/* Progress bar with labels */}
+      <div className={`flex gap-1 mb-6 ${expanded ? "px-8" : ""}`}>
+        {slides.map((s, i) => (
           <button
             key={i}
             onClick={() => goTo(i)}
-            className={`h-1 rounded-full flex-1 transition-all ${
+            className="flex-1 group"
+          >
+            <div className={`h-1 rounded-full transition-all mb-1 ${
               i === current ? "bg-primary" : i < current ? "bg-primary/40" : "bg-border"
-            }`}
-          />
+            }`} />
+            <span className={`font-body text-[10px] transition-colors ${
+              i === current ? "text-primary font-semibold" : "text-muted-foreground/50 group-hover:text-muted-foreground"
+            }`}>
+              {s.label}
+            </span>
+          </button>
         ))}
       </div>
 
@@ -96,16 +111,16 @@ const CaseSlidePresentation = ({ slides, onViewFull }: CaseSlidePresentationProp
       <div className={`relative overflow-hidden rounded-2xl border border-border bg-card ${expanded ? "flex-1 mx-8 mb-6" : "min-h-[340px] md:min-h-[400px]"}`}>
         <AnimatePresence custom={direction} mode="wait">
           <motion.div
-            key={current}
+            key={`${current}-${persona}`}
             custom={direction}
             variants={variants}
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.35, ease: "easeInOut" }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="p-8 md:p-12 h-full"
           >
-            <p className="font-body text-xs uppercase tracking-[0.25em] text-primary font-semibold mb-3">
+            <p className="font-body text-xs uppercase tracking-[0.25em] text-primary font-semibold mb-2">
               {slide.label}
             </p>
             <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6 leading-snug">
@@ -134,7 +149,7 @@ const CaseSlidePresentation = ({ slides, onViewFull }: CaseSlidePresentationProp
         </button>
       </div>
 
-      {/* Footer */}
+      {/* Footer with CTA */}
       <div className={`flex items-center justify-between mt-4 ${expanded ? "px-8 pb-6" : ""}`}>
         <div className="flex gap-1">
           {slides.map((_, i) => (
@@ -147,13 +162,35 @@ const CaseSlidePresentation = ({ slides, onViewFull }: CaseSlidePresentationProp
             />
           ))}
         </div>
-        <button
-          onClick={onViewFull}
-          className="font-body text-sm font-semibold text-primary hover:underline underline-offset-4 transition-all flex items-center gap-1.5"
-        >
-          Ver análise completa
-          <ChevronRight className="w-4 h-4" />
-        </button>
+        <div className="flex items-center gap-4">
+          {isLastSlide && (
+            <div className="flex items-center gap-2">
+              <a
+                href="mailto:gabriellecontato@outlook.com.br"
+                className="inline-flex items-center gap-1.5 font-body text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
+              >
+                <Mail className="w-3.5 h-3.5" />
+                Contato
+              </a>
+              <a
+                href="https://www.linkedin.com/in/gabriellecaetano/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 font-body text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
+              >
+                <Linkedin className="w-3.5 h-3.5" />
+                LinkedIn
+              </a>
+            </div>
+          )}
+          <button
+            onClick={onViewFull}
+            className="font-body text-sm font-semibold text-primary hover:underline underline-offset-4 transition-all flex items-center gap-1.5"
+          >
+            Ver análise completa
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </div>
       </div>
     </div>
   );

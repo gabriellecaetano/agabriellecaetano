@@ -13,10 +13,11 @@ const Contact = () => {
         >
           <p className="font-body text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-4">Contato</p>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-6 leading-tight">
-            Vamos <span className="italic font-medium">conversar?</span>
+            Vamos conversar sobre como posso gerar{" "}
+            <span className="italic font-medium">crescimento no seu produto?</span>
           </h2>
           <p className="font-body text-secondary-foreground/70 max-w-lg mx-auto mb-10 text-base">
-            Se você busca alguém que pensa além da execução e atua com foco em crescimento e produto:
+            Se você busca alguém que conecta estratégia, dados e execução para gerar impacto real:
           </p>
         </motion.div>
 
@@ -32,7 +33,7 @@ const Contact = () => {
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3 rounded-lg font-body text-sm font-semibold hover:opacity-90 transition-opacity"
           >
             <Mail className="w-4 h-4" />
-            Email
+            Entre em contato
           </a>
           <a
             href="https://www.linkedin.com/in/gabriellecaetano/"

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, ShoppingCart, Users, Search, Lightbulb, Rocket, BarChart3, Target, TrendingUp, MessageSquare, ChevronRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
-import assaiAppPreview from "@/assets/assai-app-preview.png";
+import pontoaiScreenshot from "@/assets/pontoai-app-screenshot.jpg";
 
 const Section = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
   <motion.div
@@ -250,7 +250,7 @@ const AssaiCaseStudy = () => {
                           </div>
                           <div className="p-6 flex justify-center bg-muted/30">
                             <img
-                              src={assaiAppPreview}
+                              src={pontoaiScreenshot}
                               alt="Preview do app PontoAí - Assaí Atacadista"
                               loading="lazy"
                               width={512}
