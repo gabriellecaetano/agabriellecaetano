@@ -255,7 +255,7 @@ const AssaiCaseStudy = () => {
                               loading="lazy"
                               width={512}
                               height={1024}
-                              className="w-48 md:w-56 rounded-2xl shadow-lg"
+                              className="w-48 md:w-56 rounded-2xl shadow-lg text-left"
                             />
                           </div>
                         </div>
