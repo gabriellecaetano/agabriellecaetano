@@ -185,7 +185,7 @@ const CaseSlidePresentation = ({ slides, onViewFull }: CaseSlidePresentationProp
           )}
           <button
             onClick={onViewFull}
-            className="font-body text-sm font-semibold text-primary hover:underline underline-offset-4 transition-all flex items-center gap-1.5"
+            className="font-body text-sm font-semibold px-5 py-2.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg transition-all flex items-center gap-2"
           >
             Ver análise completa
             <ChevronRight className="w-4 h-4" />
