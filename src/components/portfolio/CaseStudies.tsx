@@ -1,9 +1,9 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, ShoppingCart, Store, ExternalLink, BookOpen, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, ShoppingCart, Store, ExternalLink, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import CaseSlidePresentation, { type Persona, type SlideContent } from "./CaseSlidePresentation";
-import tccPantysImg from "@/assets/tcc-pantys.jpg";
+
 import caseAssaiCover from "@/assets/case-assai-cover.png";
 import caseSocCover from "@/assets/case-soc-cover.png";
 
@@ -473,21 +473,6 @@ const socStoreSlides: SlideContent[] = [
   },
 ];
 
-const academicProjects = [
-  {
-    title: "TCC — Planejamento de Marketing para a Pantys",
-    tag: "Universidade Santa Cecília · Publicidade e Propaganda",
-    image: tccPantysImg,
-    icon: BookOpen,
-    description:
-      "Planejamento de Marketing completo para a Pantys, marca pioneira em calcinhas absorventes no Brasil. Pesquisa quantitativa com 410 respondentes, análise de concorrentes e estratégias para expansão da marca sustentável.",
-    skills: ["Pesquisa Quantitativa", "Análise SWOT", "4Ps de Marketing", "Branding Sustentável"],
-    link: "https://www.behance.net/gallery/166317995/Trabalho-de-Conclusao-de-Curso-Pantys",
-    linkLabel: "Ver no Behance",
-    metric: { value: "410", label: "respostas na pesquisa" },
-  },
-];
-
 const CaseStudies = () => {
   const [activeCase, setActiveCase] = useState<"assai" | "soc" | null>(null);
   const slideRef = useRef<HTMLDivElement>(null);
@@ -616,72 +601,6 @@ const CaseStudies = () => {
           </AnimatePresence>
         </div>
 
-        {/* Academic Projects */}
-        <div className="mt-16">
-          <p className="font-body text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-6">
-            Projetos acadêmicos
-          </p>
-          <div className="grid md:grid-cols-2 gap-6">
-            {academicProjects.map((project, i) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.15 }}
-              >
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block rounded-2xl border border-border bg-card hover:border-primary/40 transition-all overflow-hidden h-full"
-                >
-                  <div className="relative overflow-hidden h-40">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      loading="lazy"
-                      width={800}
-                      height={512}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute top-3 right-3 w-8 h-8 rounded-lg bg-background/80 backdrop-blur-sm flex items-center justify-center text-foreground">
-                      <project.icon className="w-4 h-4" />
-                    </div>
-                  </div>
-                  <div className="p-5">
-                    <span className="font-body text-xs uppercase tracking-widest text-primary font-semibold">
-                      {project.tag}
-                    </span>
-                    <h3 className="font-display text-base font-bold text-foreground mt-1.5 mb-2 leading-snug group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="font-body text-sm text-muted-foreground leading-relaxed mb-3">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-1.5 mb-4">
-                      {project.skills.map((skill) => (
-                        <span key={skill} className="font-body text-xs px-2.5 py-1 rounded-full bg-accent text-accent-foreground">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="font-display text-lg font-bold text-foreground">{project.metric.value}</p>
-                        <p className="font-body text-xs text-muted-foreground">{project.metric.label}</p>
-                      </div>
-                      <span className="inline-flex items-center gap-1.5 font-body text-sm font-semibold text-primary group-hover:gap-2 transition-all">
-                        {project.linkLabel}
-                        <ExternalLink className="w-3.5 h-3.5" />
-                      </span>
-                    </div>
-                  </div>
-                </a>
-              </motion.div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
