@@ -129,13 +129,9 @@ const assaiSlides: SlideContent[] = [
       product: (
         <div className="space-y-4">
           <p>Testes de usabilidade com usuários reais — iterações na hierarquia visual e fluxo de troca de pontos.</p>
-          <div className="flex gap-3 flex-wrap mt-2">
-            <a href="https://www.figma.com/proto/TfXQVQmtzir905VLL36tzs/Estudos?page-id=153%3A530&node-id=153-532" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm bg-primary/10 text-primary font-semibold px-4 py-2 rounded-lg hover:bg-primary/20 transition-colors">
-              Ver protótipo <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-            <a href="https://postechfiapfase3.adalo.com/assa-app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm bg-primary/10 text-primary font-semibold px-4 py-2 rounded-lg hover:bg-primary/20 transition-colors">
-              Testar MVP <ExternalLink className="w-3.5 h-3.5" />
-            </a>
+          <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
+            <p className="text-sm font-semibold text-foreground mb-1">Decisão de produto</p>
+            <p className="text-sm">Adalo como MVP permitiu validar hipóteses em semanas, priorizando aprendizado sobre perfeição técnica.</p>
           </div>
         </div>
       ),
