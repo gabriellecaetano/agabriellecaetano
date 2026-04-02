@@ -115,14 +115,6 @@ const assaiSlides: SlideContent[] = [
       pmm: (
         <div className="space-y-4">
           <p>Estratégia omnichannel integrando app, loja, WhatsApp e e-mail. Onboarding em 5 etapas com benefício imediato.</p>
-          <div className="flex gap-3 flex-wrap mt-2">
-            <a href="https://www.figma.com/proto/TfXQVQmtzir905VLL36tzs/Estudos?page-id=153%3A530&node-id=153-532" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm bg-primary/10 text-primary font-semibold px-4 py-2 rounded-lg hover:bg-primary/20 transition-colors">
-              Ver protótipo no Figma <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-            <a href="https://postechfiapfase3.adalo.com/assa-app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm bg-primary/10 text-primary font-semibold px-4 py-2 rounded-lg hover:bg-primary/20 transition-colors">
-              Testar MVP <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-          </div>
         </div>
       ),
       growth: (
