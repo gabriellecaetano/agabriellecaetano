@@ -473,21 +473,6 @@ const socStoreSlides: SlideContent[] = [
   },
 ];
 
-const academicProjects = [
-  {
-    title: "TCC — Planejamento de Marketing para a Pantys",
-    tag: "Universidade Santa Cecília · Publicidade e Propaganda",
-    image: tccPantysImg,
-    icon: BookOpen,
-    description:
-      "Planejamento de Marketing completo para a Pantys, marca pioneira em calcinhas absorventes no Brasil. Pesquisa quantitativa com 410 respondentes, análise de concorrentes e estratégias para expansão da marca sustentável.",
-    skills: ["Pesquisa Quantitativa", "Análise SWOT", "4Ps de Marketing", "Branding Sustentável"],
-    link: "https://www.behance.net/gallery/166317995/Trabalho-de-Conclusao-de-Curso-Pantys",
-    linkLabel: "Ver no Behance",
-    metric: { value: "410", label: "respostas na pesquisa" },
-  },
-];
-
 const CaseStudies = () => {
   const [activeCase, setActiveCase] = useState<"assai" | "soc" | null>(null);
   const slideRef = useRef<HTMLDivElement>(null);
