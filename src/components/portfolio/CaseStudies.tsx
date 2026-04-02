@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import CaseSlidePresentation, { type Persona, type SlideContent } from "./CaseSlidePresentation";
 import tccPantysImg from "@/assets/tcc-pantys.jpg";
 import caseAssaiCover from "@/assets/case-assai-cover.png";
-import caseSocCover from "@/assets/case-soc-cover.jpg";
+import caseSocCover from "@/assets/case-soc-cover.png";
 
 /* ── Assaí slides (STAR method — 1 idea per slide, concise) ── */
 const assaiSlides: SlideContent[] = [
