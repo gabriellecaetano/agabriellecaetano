@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, ShoppingCart, Store, ExternalLink, BookOpen, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, ShoppingCart, Store, ExternalLink, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import CaseSlidePresentation, { type Persona, type SlideContent } from "./CaseSlidePresentation";
 import tccPantysImg from "@/assets/tcc-pantys.jpg";
