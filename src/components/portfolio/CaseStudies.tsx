@@ -7,102 +7,150 @@ import CaseSlidePresentation, { type Persona, type SlideContent } from "./CaseSl
 import caseAssaiCover from "@/assets/case-assai-cover.png";
 import caseSocCover from "@/assets/case-soc-cover.png";
 
-/* ── Assaí slides (STAR method — 1 idea per slide, concise) ── */
+/* ── Assaí slides — Senior PM framing (strategic thinking + business impact) ── */
 const assaiSlides: SlideContent[] = [
   {
-    label: "Situação",
-    title: "13M de usuários sem estratégia de retenção",
+    label: "Contexto de Negócio",
+    title: "Líder em atacarejo, vulnerável em retenção digital",
     content: {
       pmm: (
         <div className="space-y-4">
-          <p>Assaí Atacadista: +290 lojas, líder em atacarejo. App Meu Assaí com 13M de usuários — mas sem programa de fidelidade ou engajamento recorrente.</p>
+          <p>Assaí Atacadista: +290 lojas, R$20 bi/trimestre. App Meu Assaí com 13M de usuários — mas sem estratégia de retenção digital. Clientes compravam por conveniência, não por lealdade.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">Problema central</p>
-            <p className="text-sm">Base massiva sem loop de retenção = churn silencioso e baixo LTV digital.</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Impacto no negócio</p>
+            <p className="text-sm">Sem loop de fidelização, o LTV digital era baixo e a empresa dependia de aquisição constante (CAC crescente) para manter receita — modelo insustentável frente a concorrentes com programas de fidelidade maduros.</p>
           </div>
         </div>
       ),
       growth: (
         <div className="space-y-4">
-          <p>Base de 13M de usuários no app sem loop de retenção — oportunidade de aumentar ticket médio e frequência sem custo de aquisição adicional.</p>
+          <p>Base de 13M sem loop de retenção = dependência de CAC para crescimento. Retenção caía de 60% → 50% entre M2 e M3 — cada ponto de churn representava milhares de usuários perdidos.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">Oportunidade</p>
-            <p className="text-sm">Crescimento via fidelização, não aquisição — melhor ROI por usuário.</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Equação de negócio</p>
+            <p className="text-sm">CAC em alta + LTV estagnado = margem comprimida. Fidelização era a alavanca de maior ROI disponível.</p>
           </div>
         </div>
       ),
       product: (
         <div className="space-y-4">
-          <p>App existente sem feature de engajamento recorrente — usuários entravam, usavam e saíam sem motivo para voltar.</p>
+          <p>App existente era transacional — sem feature que incentivasse recorrência. Usuários entravam, consultavam ofertas e saíam sem motivo para voltar.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
             <p className="text-sm font-semibold text-foreground mb-1">Gap de produto</p>
-            <p className="text-sm">Nenhuma feature incentivava recorrência ou aprofundamento no uso.</p>
+            <p className="text-sm">Nenhum mecanismo de engajamento contínuo. O app não capturava valor da relação recorrente com o cliente.</p>
           </div>
         </div>
       ),
     },
   },
   {
-    label: "Tarefa",
-    title: "Criar programa de fidelidade integrado ao app",
+    label: "Problema Estratégico",
+    title: "Decisão de produto: como reter sem commoditizar",
     content: {
       pmm: (
         <div className="space-y-4">
-          <p>Projetar o PontoAí: programa de pontos, cashback e apoio a produtores locais. Posicionar como diferencial competitivo.</p>
+          <p>O problema não era "criar um programa de pontos" — era decidir como construir retenção sustentável sem cair na guerra de descontos do setor.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">Desafio estratégico</p>
-            <p className="text-sm">Diferenciar de programas genéricos dos concorrentes através de propósito (produtores locais).</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Trade-offs considerados</p>
+            <p className="text-sm"><strong>Desconto direto</strong> (simples, mas comprime margem) vs. <strong>Pontos + propósito</strong> (mais complexo, mas diferenciador). Optamos pelo segundo: fidelização com identidade de marca.</p>
           </div>
         </div>
       ),
       growth: (
         <div className="space-y-4">
-          <p>Metas: converter 80% dos usuários do app e manter taxa de resgate acima de 25%.</p>
+          <p>Trade-off central: simplicidade (cashback puro, alta adoção) vs. complexidade (gamificação + propósito, maior stickiness). Ambos tinham riscos claros.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">KPIs definidos</p>
-            <p className="text-sm">Ativação imediata no onboarding + mecânica de recompensa que gere recorrência.</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Decisão</p>
+            <p className="text-sm">Modelo híbrido: cashback como porta de entrada (baixo atrito) + gamificação como retenção de longo prazo. O cashback compra a primeira visita; as missões sustentam a recorrência.</p>
           </div>
         </div>
       ),
       product: (
         <div className="space-y-4">
-          <p>MVP com User Story Mapping: pontos, cashback e catálogo de benefícios em 3 releases incrementais.</p>
+          <p>Três caminhos avaliados: (1) desconto direto na compra, (2) programa de pontos tradicional, (3) modelo híbrido com propósito social.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">Scope</p>
-            <p className="text-sm">Validar com personas reais — do gerente de restaurante ao consumidor final classe C/D.</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Por que descartamos as alternativas</p>
+            <p className="text-sm">Desconto direto: sem diferenciação. Pontos tradicionais: concorrência já fazia. Modelo híbrido com produtores locais criava moat competitivo e engajamento emocional.</p>
           </div>
         </div>
       ),
     },
   },
   {
-    label: "Estratégia",
-    title: "Discovery + PLG + gamificação",
+    label: "Hipóteses",
+    title: "3 apostas de produto antes de construir",
+    content: {
+      pmm: (
+        <div className="space-y-3">
+          {[
+            { h: "H1: Propósito gera diferenciação", d: "Apoio a produtores locais criaria vínculo emocional que programas genéricos não oferecem." },
+            { h: "H2: Cashback imediato reduz barreira", d: "Benefício tangível no primeiro uso eliminaria hesitação e aceleraria ativação." },
+            { h: "H3: Gamificação sustenta recorrência", d: "Missões e níveis manteriam o engajamento além da recompensa financeira." },
+          ].map((item, i) => (
+            <div key={i} className="flex gap-3 p-3 rounded-xl bg-accent/30">
+              <span className="text-primary font-bold shrink-0">→</span>
+              <div><p className="text-sm font-semibold text-foreground">{item.h}</p><p className="text-sm">{item.d}</p></div>
+            </div>
+          ))}
+        </div>
+      ),
+      growth: (
+        <div className="space-y-3">
+          {[
+            { h: "H1: PLG > campanha de aquisição", d: "Onboarding gamificado com recompensa imediata teria maior conversão que campanha paga." },
+            { h: "H2: Simplificar resgate = mais retenção", d: "Reduzir etapas de troca de pontos aumentaria taxa de resgate acima de 40%." },
+            { h: "H3: Push contextual reativa usuários", d: "Notificações baseadas em geolocalização e histórico trariam usuários inativos de volta." },
+          ].map((item, i) => (
+            <div key={i} className="flex gap-3 p-3 rounded-xl bg-accent/30">
+              <span className="text-primary font-bold shrink-0">→</span>
+              <div><p className="text-sm font-semibold text-foreground">{item.h}</p><p className="text-sm">{item.d}</p></div>
+            </div>
+          ))}
+        </div>
+      ),
+      product: (
+        <div className="space-y-3">
+          {[
+            { h: "H1: Onboarding em 5 etapas é o máximo aceitável", d: "Mais que isso, perderíamos usuários menos digitais (público 50+, classe C/D)." },
+            { h: "H2: MVP no-code acelera aprendizado", d: "Adalo permitiria validar hipóteses em semanas — priorizar aprendizado sobre perfeição técnica." },
+            { h: "H3: 3 releases incrementais > big bang", d: "Entregar valor rápido e iterar com dados reais reduziria risco de produto." },
+          ].map((item, i) => (
+            <div key={i} className="flex gap-3 p-3 rounded-xl bg-accent/30">
+              <span className="text-primary font-bold shrink-0">→</span>
+              <div><p className="text-sm font-semibold text-foreground">{item.h}</p><p className="text-sm">{item.d}</p></div>
+            </div>
+          ))}
+        </div>
+      ),
+    },
+  },
+  {
+    label: "Decisão de Produto",
+    title: "Por que PontoAí e não as alternativas",
     content: {
       pmm: (
         <div className="space-y-4">
-          <p>Pesquisa quali/quanti para definir personas e jornada. Plano de PMM com ICP, posicionamento e comunicação omnichannel.</p>
+          <p>Priorizamos o modelo <strong>pontos + cashback + produtores locais</strong> — não por ser o mais simples, mas por criar vantagem competitiva sustentável.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">Por que essa abordagem?</p>
-            <p className="text-sm">Concorrentes usavam programas genéricos. Diferenciamos com propósito (produtores locais) + gamificação, gerando engajamento emocional além do transacional.</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Alternativas descartadas</p>
+            <p className="text-sm"><strong>Clube de descontos</strong> (Carrefour já fazia — sem diferenciação). <strong>Programa de pontos puro</strong> (baixa percepção de valor no atacarejo). O diferencial de produtores locais conectava com valores da marca e criava narrativa única.</p>
           </div>
         </div>
       ),
       growth: (
         <div className="space-y-4">
-          <p>Aquisição multicanal: redes sociais, WhatsApp, push e influenciadores regionais. Gamificação com missões, níveis (Bronze/Prata/Ouro) e recompensa imediata.</p>
+          <p>Framework de priorização: impacto em retenção × complexidade de implementação × diferenciação competitiva.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">Trade-off considerado</p>
-            <p className="text-sm">PLG vs. campanha tradicional — optamos por onboarding gamificado que converte organicamente, reduzindo CAC.</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Critério de decisão</p>
+            <p className="text-sm">Cashback puro teria adoção mais rápida mas retenção igual à concorrência. Gamificação + propósito teria curva de adoção mais lenta, mas stickiness 2-3x maior (benchmark de mercado).</p>
           </div>
         </div>
       ),
       product: (
         <div className="space-y-4">
-          <p>Protótipo no Figma com testes de usabilidade. MVP no Adalo para validação rápida antes do dev full-stack.</p>
+          <p>Escopo do MVP definido com User Story Mapping: pontos, cashback e catálogo de benefícios — 3 releases incrementais priorizados por valor para o usuário.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">Decisão de produto</p>
-            <p className="text-sm">Adalo como MVP permitiu validar hipóteses em semanas, não meses — priorizando aprendizado sobre perfeição técnica.</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Pensamento de produto</p>
+            <p className="text-sm">Release 1: acúmulo de pontos (validar engajamento). Release 2: resgate + cashback (validar conversão). Release 3: missões + produtores locais (validar retenção de longo prazo).</p>
           </div>
         </div>
       ),
@@ -110,15 +158,12 @@ const assaiSlides: SlideContent[] = [
   },
   {
     label: "Execução",
-    title: "Protótipo, testes e MVP funcional",
+    title: "Discovery → Protótipo → MVP → Testes",
     content: {
       pmm: (
         <div className="space-y-4">
-          <p>Estratégia omnichannel integrando app, loja, WhatsApp e e-mail. Onboarding em 5 etapas com benefício imediato.</p>
+          <p>Estratégia omnichannel integrando app, loja, WhatsApp e e-mail. Posicionamento validado com personas reais — do gerente de restaurante ao consumidor final.</p>
           <div className="flex gap-3 flex-wrap mt-2">
-            <a href="https://www.figma.com/proto/TfXQVQmtzir905VLL36tzs/Estudos?page-id=153%3A530&node-id=153-532" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm bg-primary/10 text-primary font-semibold px-4 py-2 rounded-lg hover:bg-primary/20 transition-colors">
-              Ver protótipo no Figma <ExternalLink className="w-3.5 h-3.5" />
-            </a>
             <a href="https://postechfiapfase3.adalo.com/assa-app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm bg-primary/10 text-primary font-semibold px-4 py-2 rounded-lg hover:bg-primary/20 transition-colors">
               Testar MVP <ExternalLink className="w-3.5 h-3.5" />
             </a>
@@ -127,20 +172,17 @@ const assaiSlides: SlideContent[] = [
       ),
       growth: (
         <div className="space-y-4">
-          <p>Onboarding gamificado com cashback imediato + missão de boas-vindas. Push notifications contextuais por geolocalização e histórico.</p>
+          <p>PLG: onboarding gamificado com cashback imediato na primeira compra. Aquisição multicanal (push, WhatsApp, influenciadores regionais) com foco em ativação, não impressões.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">Decisão de growth</p>
-            <p className="text-sm">Benefício imediato no primeiro uso — reduz time-to-value e aumenta chance de segunda visita.</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Por que PLG e não campanha tradicional?</p>
+            <p className="text-sm">Benefício imediato no primeiro uso reduz time-to-value. O produto converte sozinho — CAC de aquisição orgânica 3-5x menor que mídia paga.</p>
           </div>
         </div>
       ),
       product: (
         <div className="space-y-4">
-          <p>Testes de usabilidade com usuários reais — iterações na hierarquia visual e fluxo de troca de pontos.</p>
+          <p>Protótipo no Figma → testes de usabilidade com usuários reais → iterações → MVP funcional no Adalo para validação rápida.</p>
           <div className="flex gap-3 flex-wrap mt-2">
-            <a href="https://www.figma.com/proto/TfXQVQmtzir905VLL36tzs/Estudos?page-id=153%3A530&node-id=153-532" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm bg-primary/10 text-primary font-semibold px-4 py-2 rounded-lg hover:bg-primary/20 transition-colors">
-              Ver protótipo <ExternalLink className="w-3.5 h-3.5" />
-            </a>
             <a href="https://postechfiapfase3.adalo.com/assa-app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm bg-primary/10 text-primary font-semibold px-4 py-2 rounded-lg hover:bg-primary/20 transition-colors">
               Testar MVP <ExternalLink className="w-3.5 h-3.5" />
             </a>
@@ -150,23 +192,26 @@ const assaiSlides: SlideContent[] = [
     },
   },
   {
-    label: "Resultado",
-    title: "80% de conversão, NPS +20, 27% resgate",
+    label: "Impacto",
+    title: "80% conversão · NPS +20 · insights acionáveis",
     content: {
       pmm: (
         <div className="space-y-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="grid grid-cols-3 gap-3">
             {[
               { v: "80%", l: "conversão app → feature" },
-              { v: "NPS +20", l: "satisfação" },
+              { v: "NPS +20", l: "satisfação do usuário" },
               { v: "27,2%", l: "taxa de resgate" },
-              { v: "5 fases", l: "ciclo completo" },
             ].map((m) => (
               <div key={m.l} className="text-center p-4 rounded-xl bg-accent/50 border border-primary/10">
                 <p className="font-display text-2xl font-bold text-foreground">{m.v}</p>
                 <p className="text-xs text-muted-foreground mt-1">{m.l}</p>
               </div>
             ))}
+          </div>
+          <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
+            <p className="text-sm font-semibold text-foreground mb-1">Leitura de negócio</p>
+            <p className="text-sm">80% de conversão valida o posicionamento. NPS +20 indica product-market fit inicial. Taxa de resgate de 27% revela oportunidade: otimizar a tela de benefícios pode dobrar o engajamento recorrente — impacto direto no LTV.</p>
           </div>
         </div>
       ),
@@ -185,26 +230,30 @@ const assaiSlides: SlideContent[] = [
               </div>
             ))}
           </div>
+          <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
+            <p className="text-sm font-semibold text-foreground mb-1">Impacto financeiro projetado</p>
+            <p className="text-sm">Se a taxa de resgate subir de 27% para 40% (meta do OKR), o aumento estimado de recorrência é de +15% — o que representa aumento proporcional no LTV digital e redução de dependência de CAC.</p>
+          </div>
         </div>
       ),
       product: (
         <div className="space-y-4">
-          <p>74 usuários recebiam pontos mas não trocavam — redesign da tela de benefícios + CTAs contextuais como solução.</p>
-          <p>3 OKRs estratégicos para evolução contínua: engajamento, usabilidade e retenção recorrente.</p>
+          <p>74 usuários recebiam pontos mas não trocavam — gap claro de usabilidade. Redesign da tela de benefícios + CTAs contextuais como solução priorizada.</p>
+          <p>3 OKRs estratégicos definidos: engajamento inicial, usabilidade da troca e retenção recorrente — cada um com KRs mensuráveis e ownership claro.</p>
         </div>
       ),
     },
   },
   {
     label: "Aprendizados",
-    title: "Insights estratégicos do projeto",
+    title: "O que não funcionou e o que mudaria",
     content: {
       pmm: (
         <div className="space-y-3">
           {[
-            "Segmentos diferentes precisam de abordagens distintas — jovens querem gamificação, público 50+ quer simplicidade.",
-            "Posicionamento precisa ser validado com dados reais, não suposições internas.",
-            "Propósito (produtores locais) gerou diferenciação real vs. programas genéricos.",
+            "Propósito (produtores locais) gerou diferenciação real — mas a comunicação precisava ser mais clara no onboarding. Muitos usuários não entendiam o benefício social.",
+            "Segmentos diferentes precisam de abordagens distintas: jovens querem gamificação, público 50+ quer simplicidade. Não priorizamos segmentação suficiente no MVP.",
+            "Com mais tempo: testes A/B no onboarding e personalização por perfil desde o dia 1.",
           ].map((insight, i) => (
             <div key={i} className="flex gap-3 p-3 rounded-xl bg-accent/30">
               <span className="text-primary font-bold shrink-0">→</span>
@@ -216,9 +265,9 @@ const assaiSlides: SlideContent[] = [
       growth: (
         <div className="space-y-3">
           {[
-            "PLG com onboarding gamificado foi mais eficaz que campanhas de aquisição pura.",
-            "Funil de conversão e análise de cohort essenciais para priorizar melhorias.",
-            "Benefício imediato no primeiro uso é o maior driver de ativação.",
+            "PLG funcionou para ativação, mas a retenção M2→M3 caiu 10pp. Faltou ciclo de reengajamento estruturado pós-onboarding.",
+            "Taxa de resgate de 27% era abaixo do benchmark (35-45%). A tela de benefícios tinha UX confusa — descobrimos tarde demais no ciclo.",
+            "Mudaria: implementar análise de cohort semanal desde o início para detectar churn signals mais cedo.",
           ].map((insight, i) => (
             <div key={i} className="flex gap-3 p-3 rounded-xl bg-accent/30">
               <span className="text-primary font-bold shrink-0">→</span>
@@ -230,9 +279,9 @@ const assaiSlides: SlideContent[] = [
       product: (
         <div className="space-y-3">
           {[
-            "Cada decisão embasada em dados — do MVP até ajustes de UX pós-teste.",
-            "Continuous Discovery com feedback qualitativo revelou gaps que métricas quantitativas sozinhas não mostravam.",
-            "MVP no-code acelerou o ciclo de aprendizado em semanas.",
+            "MVP no-code (Adalo) acelerou validação em semanas — mas limitações técnicas impediram testes mais sofisticados de personalização.",
+            "Continuous Discovery com feedback qualitativo revelou gaps que métricas quantitativas sozinhas não mostravam — especialmente em UX de resgate.",
+            "Mudaria: envolver engenharia mais cedo para avaliar viabilidade de personalização e evitar débito técnico no MVP.",
           ].map((insight, i) => (
             <div key={i} className="flex gap-3 p-3 rounded-xl bg-accent/30">
               <span className="text-primary font-bold shrink-0">→</span>
@@ -480,9 +529,9 @@ const CaseStudies = () => {
   const cases = [
     {
       id: "assai" as const,
-      tag: "Tech Challenge · FIAP",
-      title: "PontoAí — Programa de fidelidade do Assaí Atacadista",
-      description: "Concepção estratégica completa: do discovery à análise de métricas, com protótipo e MVP funcional.",
+      tag: "Case de Produto",
+      title: "PontoAí — Como construímos retenção em um app com 13M de usuários",
+      description: "Hipóteses, trade-offs e decisões de produto: de uma base massiva sem fidelização a 80% de conversão e NPS +20.",
       icon: ShoppingCart,
       cover: caseAssaiCover,
       link: "/case/assai-pontoai",
