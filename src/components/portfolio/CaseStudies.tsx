@@ -529,9 +529,9 @@ const CaseStudies = () => {
   const cases = [
     {
       id: "assai" as const,
-      tag: "Tech Challenge · FIAP",
-      title: "PontoAí — Programa de fidelidade do Assaí Atacadista",
-      description: "Concepção estratégica completa: do discovery à análise de métricas, com protótipo e MVP funcional.",
+      tag: "Case de Produto",
+      title: "PontoAí — Como construímos retenção em um app com 13M de usuários",
+      description: "Hipóteses, trade-offs e decisões de produto: de uma base massiva sem fidelização a 80% de conversão e NPS +20.",
       icon: ShoppingCart,
       cover: caseAssaiCover,
       link: "/case/assai-pontoai",
