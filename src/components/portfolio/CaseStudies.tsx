@@ -584,9 +584,9 @@ const CaseStudies = () => {
     },
     {
       id: "soc" as const,
-      tag: "SOC Store · Marketplace",
-      title: "Otimização da jornada e integração de sistemas na SOC Store",
-      description: "Atuação na interseção entre marketing, produto e experiência, com foco em CRM, integração e crescimento.",
+      tag: "Case de Produto",
+      title: "SOC Store — Como transformei otimização de funil em +20% de conversão",
+      description: "Hipóteses, trade-offs e decisões: de uma jornada fragmentada entre 3 plataformas a um funil integrado com +20% conversão e +10% retenção.",
       icon: Store,
       cover: caseSocCover,
       link: "/case/soc-store",
