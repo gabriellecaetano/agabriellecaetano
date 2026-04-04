@@ -405,7 +405,7 @@ const SocStoreCaseStudy = () => {
                 </h3>
                 <div className="space-y-3">
                   {[
-                    "Implementar testes A/B estruturados desde o início — cada mudança no funil com controle e grupo experimental, não "antes e depois" sem controle.",
+                    "Implementar testes A/B estruturados desde o início — cada mudança no funil com controle e grupo experimental, não apenas comparação antes/depois.",
                     "Criar dashboards de acompanhamento de funil em tempo real — visibilidade imediata de drop-offs para reagir em dias, não semanas.",
                     "Explorar estratégias de upsell e cross-sell com segmentação avançada — o CRM tinha dados suficientes para personalização mais profunda.",
                   ].map((item, i) => (
