@@ -294,116 +294,150 @@ const assaiSlides: SlideContent[] = [
   },
 ];
 
-/* ── SOC Store slides (STAR method) ── */
+/* ── SOC Store slides — Senior PM framing (strategic thinking + business impact) ── */
 const socStoreSlides: SlideContent[] = [
   {
-    label: "Situação",
-    title: "Marketplace com jornada fragmentada e baixa conversão",
+    label: "Contexto de Negócio",
+    title: "Marketplace com jornada fragmentada entre 3 plataformas",
     content: {
       pmm: (
         <div className="space-y-4">
-          <p>SOC Store: marketplace de treinamentos para profissionais de SST. Aquisição estruturada, mas jornada com fricções que impactavam conversão e retenção.</p>
+          <p>SOC Store: marketplace de treinamentos para profissionais de SST. Aquisição estruturada, mas jornada do usuário passava por 3 plataformas sem integração — cada transição era ponto de abandono.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">Problema central</p>
-            <p className="text-sm">Experiência fragmentada entre LMS e pagamento gerava queda no funil e perda de receita.</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Impacto no negócio</p>
+            <p className="text-sm">Tráfego qualificado se perdia no funil. CAC crescente sem compensação — LTV limitado por ausência de retenção estruturada.</p>
           </div>
         </div>
       ),
       growth: (
         <div className="space-y-4">
-          <p>Funil com queda significativa entre etapas — tráfego chegava mas não convertia. Baixa ativação pós-conversão.</p>
+          <p>Funil com queda significativa entre etapas — tráfego chegava mas não convertia. Sem comunicação pós-compra, retenção era quase zero.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">Diagnóstico</p>
-            <p className="text-sm">Problema na jornada, não na aquisição — otimizar o funil teria mais ROI que mais tráfego.</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Equação de negócio</p>
+            <p className="text-sm">Problema era conversão, não volume. Cada R$1 em otimização de funil teria 3x mais ROI que R$1 em tráfego.</p>
           </div>
         </div>
       ),
       product: (
         <div className="space-y-4">
-          <p>Plataformas LMS (Konviva) e pagamento (Safe2Pay) não conversavam. Usuários abandonavam nos pontos de transição.</p>
+          <p>Plataformas LMS (Konviva), pagamento (Safe2Pay) e site não conversavam. Usuários abandonavam nos pontos de transição entre sistemas.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
             <p className="text-sm font-semibold text-foreground mb-1">Gap técnico</p>
-            <p className="text-sm">Falta de integração entre sistemas criava fricções invisíveis mas de alto impacto.</p>
+            <p className="text-sm">Falta de integração criava fricções invisíveis de alto impacto — métricas agregadas não mostravam onde exatamente o usuário desistia.</p>
           </div>
         </div>
       ),
     },
   },
   {
-    label: "Tarefa",
-    title: "Aumentar conversão e retenção reduzindo fricção",
+    label: "Problema Estratégico",
+    title: "Mais tráfego ou consertar o funil?",
     content: {
       pmm: (
         <div className="space-y-4">
-          <p>Três gargalos identificados: queda no funil de compra, experiência fragmentada e baixa ativação pós-conversão.</p>
+          <p>O problema não era "melhorar a experiência" — era decidir onde alocar esforço limitado para máximo impacto em receita.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">Impacto direto</p>
-            <p className="text-sm">Perda de receita, baixa eficiência de aquisição e menor LTV dos usuários.</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Trade-off central</p>
+            <p className="text-sm"><strong>Mais tráfego</strong> (resultado rápido, ROI decrescente) vs. <strong>Otimizar funil</strong> (mais complexo, mas cada melhoria multiplicava o valor de todo tráfego existente).</p>
           </div>
         </div>
       ),
       growth: (
         <div className="space-y-4">
-          <p>Hipóteses: fricção entre plataformas reduzia conversão; ausência de comunicação estruturada impactava ativação.</p>
+          <p>Trade-off: investir em volume (escala rápida) vs. eficiência (fundação escalável). Dados mostraram que o gargalo era conversão, não alcance.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">Priorização</p>
-            <p className="text-sm">Focamos em quick wins de conversão + fundação de CRM para retenção de longo prazo.</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Decisão</p>
+            <p className="text-sm">Otimização de funil + CRM estruturado. Cada novo visitante converteria mais — retorno composto ao longo do tempo.</p>
           </div>
         </div>
       ),
       product: (
         <div className="space-y-4">
-          <p>Necessidade de integração entre LMS e pagamento. Mapeamento completo da jornada para priorizar fricções.</p>
+          <p>Três caminhos: (1) otimizar copy/CTAs, (2) migrar para plataforma all-in-one, (3) integrar sistemas existentes + CRM.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">Escopo</p>
-            <p className="text-sm">Eliminar inconsistências na transição entre sistemas como prioridade P0.</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Por que descartamos as alternativas</p>
+            <p className="text-sm">Copy sozinha tratava sintoma. Migração era alto risco. Integração resolvia a causa raiz sem interromper operação.</p>
           </div>
         </div>
       ),
     },
   },
   {
-    label: "Estratégia",
-    title: "Três pilares: fricção, ativação e retenção",
+    label: "Hipóteses",
+    title: "3 apostas antes de agir",
+    content: {
+      pmm: (
+        <div className="space-y-3">
+          {[
+            { h: "H1: Fricção entre plataformas mata conversão", d: "Eliminar transições entre sistemas aumentaria conversão proporcionalmente." },
+            { h: "H2: CRM estruturado cria loop de retenção", d: "Comunicação pós-compra segmentada daria motivo para o aluno voltar." },
+            { h: "H3: Jornada confusa dificulta decisão", d: "Simplificar o caminho até a compra reduziria desistências no meio do funil." },
+          ].map((item, i) => (
+            <div key={i} className="flex gap-3 p-3 rounded-xl bg-accent/30">
+              <span className="text-primary font-bold shrink-0">→</span>
+              <div><p className="text-sm font-semibold text-foreground">{item.h}</p><p className="text-sm">{item.d}</p></div>
+            </div>
+          ))}
+        </div>
+      ),
+      growth: (
+        <div className="space-y-3">
+          {[
+            { h: "H1: Timing > copy em e-mails", d: "E-mails 2h após abandono teriam 3x mais abertura que 24h — priorizar timing sobre criatividade." },
+            { h: "H2: Segmentação comportamental > demográfica", d: "Segmentar por ação (curso visto, carrinho abandonado) teria mais impacto que por perfil." },
+            { h: "H3: Otimização de funil > mais tráfego", d: "Cada melhoria no funil multiplicaria o valor de todo investimento em aquisição." },
+          ].map((item, i) => (
+            <div key={i} className="flex gap-3 p-3 rounded-xl bg-accent/30">
+              <span className="text-primary font-bold shrink-0">→</span>
+              <div><p className="text-sm font-semibold text-foreground">{item.h}</p><p className="text-sm">{item.d}</p></div>
+            </div>
+          ))}
+        </div>
+      ),
+      product: (
+        <div className="space-y-3">
+          {[
+            { h: "H1: Integração é P0, não nice-to-have", d: "Sem integração, otimizações pontuais não teriam efeito sustentável na jornada." },
+            { h: "H2: Mapeamento end-to-end revela fricções invisíveis", d: "Análise completa da jornada mostraria problemas que métricas agregadas escondiam." },
+            { h: "H3: Implementação faseada reduz risco", d: "Execução em 3 frentes simultâneas sem interromper operação existente." },
+          ].map((item, i) => (
+            <div key={i} className="flex gap-3 p-3 rounded-xl bg-accent/30">
+              <span className="text-primary font-bold shrink-0">→</span>
+              <div><p className="text-sm font-semibold text-foreground">{item.h}</p><p className="text-sm">{item.d}</p></div>
+            </div>
+          ))}
+        </div>
+      ),
+    },
+  },
+  {
+    label: "Decisão de Produto",
+    title: "Por que integração + CRM + otimização",
     content: {
       pmm: (
         <div className="space-y-4">
-          <div className="grid gap-3">
-            {[
-              { n: "01", t: "Redução de fricção", d: "Fluxo mais contínuo e intuitivo" },
-              { n: "02", t: "Aumento de ativação", d: "Garantir avanço pós-conversão" },
-              { n: "03", t: "Retenção via CRM", d: "Comunicação contínua estruturada" },
-            ].map((p) => (
-              <div key={p.n} className="flex gap-3 items-start p-3 rounded-xl bg-accent/30">
-                <span className="font-display text-lg font-bold text-primary/50">{p.n}</span>
-                <div>
-                  <p className="font-semibold text-foreground text-sm">{p.t}</p>
-                  <p className="text-sm">{p.d}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <p>Priorizamos <strong>integração de sistemas + CRM + otimização de jornada</strong> — não por ser o mais rápido, mas por resolver a causa raiz e criar fundação escalável.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">Por que essa abordagem?</p>
-            <p className="text-sm">Otimizar o que já existia antes de investir em aquisição — melhor ROI com menor risco.</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Alternativas descartadas</p>
+            <p className="text-sm"><strong>Só otimizar copy</strong> (tratava sintoma). <strong>Migrar plataforma</strong> (alto risco operacional). <strong>Só CRM sem integração</strong> (retenção sem conversão). A abordagem completa atacava o ciclo inteiro.</p>
           </div>
         </div>
       ),
       growth: (
         <div className="space-y-4">
-          <p>Abordagem data-driven: análise de funil para identificar onde o tráfego se perdia.</p>
+          <p>Framework: impacto em receita × esforço × risco. Integração tinha maior impacto, CRM tinha menor risco, e otimização de jornada conectava os dois.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">Trade-off</p>
-            <p className="text-sm">Investir em otimização de funil vs. mais tráfego. Dados mostraram que o problema era conversão, não volume.</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Critério de priorização</p>
+            <p className="text-sm">ROI projetado: otimização de funil 3x mais eficiente que aumento de tráfego. CRM como investimento de longo prazo em LTV.</p>
           </div>
         </div>
       ),
       product: (
         <div className="space-y-4">
-          <p>Mapeamento end-to-end da jornada com priorização por impacto no negócio.</p>
+          <p>Execução em 3 frentes: Frente 1 (integração LMS + pagamento), Frente 2 (CRM HubSpot), Frente 3 (mapeamento e otimização de jornada).</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">Decisão técnica</p>
-            <p className="text-sm">Integração de sistemas como requisito P0 — sem isso, otimizações pontuais não teriam efeito sustentável.</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Pensamento de produto</p>
+            <p className="text-sm">Implementação faseada que não interrompia operação. Cada frente gerava valor independente, mas o impacto total era multiplicativo.</p>
           </div>
         </div>
       ),
@@ -411,43 +445,46 @@ const socStoreSlides: SlideContent[] = [
   },
   {
     label: "Execução",
-    title: "CRM, integração de sistemas e otimização",
+    title: "Integração, CRM e otimização de jornada",
     content: {
       pmm: (
         <div className="space-y-4">
-          <p>Reestruturação de CRM no HubSpot: fluxos automatizados, segmentação comportamental e nutrição ao longo do funil.</p>
-          <p>Ajustes em copy, timing de e-mails e iterações nos fluxos de nutrição.</p>
+          <p>Atuação cross-funcional: ponte entre marketing, produto e operações. Cada decisão validada com dados e alinhada com as 3 áreas.</p>
+          <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
+            <p className="text-sm font-semibold text-foreground mb-1">Influência em stakeholders</p>
+            <p className="text-sm">Converti budget de mídia paga para integração usando análise de ROI comparativo. Marketing e produto alinhados pelo win-win da integração.</p>
+          </div>
         </div>
       ),
       growth: (
         <div className="space-y-4">
-          <p>Testes em pontos críticos da jornada: ajustes de copy, timing e CTAs. Segmentação comportamental para personalizar comunicação.</p>
+          <p>Iterações em timing de e-mails (2h vs 24h), segmentação comportamental e CTAs. Cada teste medido por impacto em conversão — sem otimizações de vaidade.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
-            <p className="text-sm font-semibold text-foreground mb-1">Foco</p>
-            <p className="text-sm">Cada teste medido por impacto em conversão e retenção — sem otimizações de vaidade.</p>
+            <p className="text-sm font-semibold text-foreground mb-1">Insight de execução</p>
+            <p className="text-sm">Timing foi mais impactante que copy — e-mails 2h após abandono tinham 3x mais abertura. Priorizamos timing sobre criatividade.</p>
           </div>
         </div>
       ),
       product: (
         <div className="space-y-4">
-          <p>Integração Konviva (LMS) + Safe2Pay (pagamento) — redução de etapas e inconsistências na jornada.</p>
-          <p>Mapeamento completo da experiência com priorização de pontos de fricção por impacto.</p>
+          <p>Integração Konviva + Safe2Pay: redução de etapas e eliminação de inconsistências. Mapeamento end-to-end revelou fricções que métricas agregadas não mostravam.</p>
+          <p>CRM no HubSpot: fluxos automatizados com segmentação por comportamento (curso visto, carrinho abandonado, conclusão).</p>
         </div>
       ),
     },
   },
   {
-    label: "Resultado",
-    title: "+20% conversão, +10% retenção",
+    label: "Impacto",
+    title: "+20% conversão · +10% retenção · ROI 3x",
     content: {
       pmm: (
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-3">
             {[
-              { v: "+20%", l: "aumento em conversão" },
-              { v: "+10%", l: "aumento em retenção" },
-              { v: "LMS", l: "integração Konviva" },
-              { v: "CRM", l: "fluxos HubSpot" },
+              { v: "+20%", l: "conversão no funil" },
+              { v: "+10%", l: "retenção de alunos" },
+              { v: "3→1", l: "plataformas integradas" },
+              { v: "3x", l: "ROI vs. mais tráfego" },
             ].map((m) => (
               <div key={m.l} className="text-center p-4 rounded-xl bg-accent/50 border border-primary/10">
                 <p className="font-display text-2xl font-bold text-foreground">{m.v}</p>
@@ -455,33 +492,37 @@ const socStoreSlides: SlideContent[] = [
               </div>
             ))}
           </div>
+          <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
+            <p className="text-sm font-semibold text-foreground mb-1">Leitura de negócio</p>
+            <p className="text-sm">+20% conversão = receita incremental sem CAC adicional. +10% retenção = aumento de LTV composto. Projeção: taxa de recompra de ~5% para ~15% em 6 meses.</p>
+          </div>
         </div>
       ),
       growth: (
         <div className="space-y-3">
-          <p className="font-semibold text-foreground">+20% de conversão com otimização de funil e CRM estruturado.</p>
-          <p>+10% de retenção com estratégias de relacionamento e comunicação pós-compra.</p>
+          <p className="font-semibold text-foreground">+20% de conversão com otimização de funil + integração de sistemas.</p>
+          <p>+10% de retenção com CRM estruturado e comunicação pós-compra segmentada.</p>
           <p>Melhor aproveitamento do tráfego existente — eficiência sem custo adicional de aquisição.</p>
         </div>
       ),
       product: (
         <div className="space-y-3">
-          <p>Jornada mais fluida com integração de plataformas — redução significativa de fricção.</p>
-          <p>Melhoria na experiência do usuário evidenciada por métricas de engajamento e retenção.</p>
+          <p>Jornada integrada entre 3 plataformas — fricção eliminada nos pontos de transição.</p>
+          <p>CRM como fundação para estratégia de retenção de longo prazo — dados comportamentais alimentando decisões de produto.</p>
         </div>
       ),
     },
   },
   {
     label: "Aprendizados",
-    title: "Insights estratégicos",
+    title: "Erros, iterações e evolução",
     content: {
       pmm: (
         <div className="space-y-3">
           {[
-            "Conversão depende da qualidade da jornada, não apenas da aquisição.",
-            "Pequenas fricções acumuladas geram grande impacto em receita.",
-            "CRM é alavanca direta de retenção e LTV.",
+            "Mapeamento end-to-end deveria ter sido o primeiro passo — otimizações pontuais sem visão completa tinham impacto marginal.",
+            "Segmentação genérica de CRM não funciona — só segmentação comportamental granular gerou engajamento real.",
+            "Com mais tempo: testes A/B estruturados e dashboard de funil em tempo real desde o dia 1.",
           ].map((insight, i) => (
             <div key={i} className="flex gap-3 p-3 rounded-xl bg-accent/30">
               <span className="text-primary font-bold shrink-0">→</span>
@@ -493,9 +534,9 @@ const socStoreSlides: SlideContent[] = [
       growth: (
         <div className="space-y-3">
           {[
-            "Com mais tempo: testes A/B estruturados em toda a jornada.",
-            "Dashboards de funil em tempo real como próximo passo.",
-            "Segmentação avançada e estratégias de upsell/cross-sell como evolução.",
+            "Primeiros fluxos de CRM tinham taxas de abertura abaixo de 15% — só melhorou com segmentação comportamental.",
+            "Faltou dashboard em tempo real — decisões retroativas perdiam oportunidade de reagir rapidamente.",
+            "Próximo passo: estratégias de upsell/cross-sell com dados comportamentais do CRM.",
           ].map((insight, i) => (
             <div key={i} className="flex gap-3 p-3 rounded-xl bg-accent/30">
               <span className="text-primary font-bold shrink-0">→</span>
@@ -507,9 +548,9 @@ const socStoreSlides: SlideContent[] = [
       product: (
         <div className="space-y-3">
           {[
-            "Integração entre sistemas é essencial — não é nice-to-have.",
-            "Mapeamento de jornada precisa ser contínuo, não pontual.",
-            "Fricções ressurgem com novas features — monitoramento constante.",
+            "Integração entre sistemas é P0, não nice-to-have — sem ela, otimizações pontuais não sustentam.",
+            "Mapeamento de jornada precisa ser contínuo — fricções ressurgem com novas features.",
+            "Implementação faseada reduziu risco operacional e manteve a operação funcionando durante a transição.",
           ].map((insight, i) => (
             <div key={i} className="flex gap-3 p-3 rounded-xl bg-accent/30">
               <span className="text-primary font-bold shrink-0">→</span>
