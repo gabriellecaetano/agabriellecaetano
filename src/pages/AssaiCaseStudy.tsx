@@ -37,7 +37,7 @@ const AssaiCaseStudy = () => {
       </nav>
 
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-28">
+      <section className="pt-24 pb-12 md:pt-40 md:pb-28">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="flex items-center gap-3 mb-6">
@@ -50,7 +50,7 @@ const AssaiCaseStudy = () => {
               </div>
             </div>
 
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground leading-[1.05] mb-6">
+            <h1 className="font-display text-3xl md:text-6xl font-bold text-foreground leading-[1.1] mb-6">
               PontoAí — <span className="italic font-medium text-primary">Como construímos retenção em um app com 13M de usuários sem fidelização</span>
             </h1>
 
@@ -73,7 +73,7 @@ const AssaiCaseStudy = () => {
       {/* Key Metrics Bar */}
       <Section>
         <div className="bg-secondary text-secondary-foreground">
-          <div className="max-w-5xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="max-w-5xl mx-auto px-4 md:px-6 py-8 md:py-10 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {[
               { value: "80%", label: "Conversão app → feature" },
               { value: "NPS +20", label: "Product-market fit" },
@@ -81,7 +81,7 @@ const AssaiCaseStudy = () => {
               { value: "10pp", label: "Gap de retenção M2→M3" },
             ].map((m) => (
               <div key={m.label} className="text-center">
-                <p className="font-display text-3xl md:text-4xl font-bold">{m.value}</p>
+                <p className="font-display text-2xl md:text-4xl font-bold">{m.value}</p>
                 <p className="font-body text-sm text-secondary-foreground/60 mt-1">{m.label}</p>
               </div>
             ))}
@@ -90,7 +90,7 @@ const AssaiCaseStudy = () => {
       </Section>
 
       {/* 1. Contexto de Negócio */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">01 · Contexto de Negócio</p>
@@ -138,7 +138,7 @@ const AssaiCaseStudy = () => {
       </section>
 
       {/* 2. Problema Estratégico */}
-      <section className="py-20 bg-card/50">
+      <section className="py-12 md:py-20 bg-card/50">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">02 · Problema Estratégico</p>
@@ -180,7 +180,7 @@ const AssaiCaseStudy = () => {
       </section>
 
       {/* 3. Hipóteses de Produto */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">03 · Hipóteses de Produto</p>
@@ -223,7 +223,7 @@ const AssaiCaseStudy = () => {
       </section>
 
       {/* 4. Decisão de Produto */}
-      <section className="py-20 bg-card/50">
+      <section className="py-12 md:py-20 bg-card/50">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">04 · Decisão de Produto</p>
@@ -267,7 +267,7 @@ const AssaiCaseStudy = () => {
       </section>
 
       {/* 5. Execução (resumida) */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">05 · Execução</p>
@@ -340,7 +340,7 @@ const AssaiCaseStudy = () => {
       </section>
 
       {/* 6. Impacto e Métricas */}
-      <section className="py-20 bg-card/50">
+      <section className="py-12 md:py-20 bg-card/50">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">06 · Impacto e Métricas</p>
@@ -433,7 +433,7 @@ const AssaiCaseStudy = () => {
       </section>
 
       {/* 7. Aprendizados e Iterações */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">07 · Aprendizados</p>
@@ -482,7 +482,7 @@ const AssaiCaseStudy = () => {
       </section>
 
       {/* 8. Influência e Stakeholders */}
-      <section className="py-20 bg-card/50">
+      <section className="py-12 md:py-20 bg-card/50">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">08 · Influência e Stakeholders</p>
@@ -556,16 +556,16 @@ const AssaiCaseStudy = () => {
           <p className="font-body text-secondary-foreground/60 mb-8">
             Vamos conversar sobre como posso contribuir para o seu time de Produto ou Marketing.
           </p>
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <a
               href="mailto:gabriellecontato@outlook.com.br"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-body text-sm font-semibold hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-body text-sm font-semibold hover:opacity-90 transition-opacity w-full sm:w-auto justify-center"
             >
               Entre em contato
             </a>
             <Link
               to="/"
-              className="inline-flex items-center gap-2 border border-secondary-foreground/20 px-8 py-3.5 rounded-full font-body text-sm font-medium hover:bg-secondary-foreground/10 transition-colors"
+              className="inline-flex items-center gap-2 border border-secondary-foreground/20 px-8 py-3.5 rounded-full font-body text-sm font-medium hover:bg-secondary-foreground/10 transition-colors w-full sm:w-auto justify-center"
             >
               Ver portfólio
             </Link>
