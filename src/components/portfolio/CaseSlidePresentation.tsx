@@ -56,13 +56,13 @@ const CaseSlidePresentation = ({ slides, onViewFull }: CaseSlidePresentationProp
   return (
     <div className={`relative ${expanded ? "fixed inset-0 z-50 bg-background flex flex-col" : ""}`}>
       {/* Persona switcher */}
-      <div className={`flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4 ${expanded ? "px-8 pt-6" : ""}`}>
-        <div className="flex gap-2">
+      <div className={`flex flex-col gap-3 mb-4 ${expanded ? "px-4 md:px-8 pt-6" : ""}`}>
+        <div className="flex flex-wrap gap-2">
           {(Object.keys(personaLabels) as Persona[]).map((p) => (
             <button
               key={p}
               onClick={() => setPersona(p)}
-              className={`font-body text-xs px-4 py-2 rounded-full border transition-all font-medium ${
+              className={`font-body text-xs px-3 md:px-4 py-1.5 md:py-2 rounded-full border transition-all font-medium ${
                 persona === p
                   ? "bg-primary text-primary-foreground border-primary"
                   : "border-border text-muted-foreground hover:border-primary/40 hover:text-foreground"
@@ -73,13 +73,13 @@ const CaseSlidePresentation = ({ slides, onViewFull }: CaseSlidePresentationProp
             </button>
           ))}
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 self-end">
           <span className="font-body text-xs text-muted-foreground">
             {current + 1} de {slides.length}
           </span>
           <button
             onClick={() => setExpanded(!expanded)}
-            className="p-1.5 rounded-lg border border-border text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors"
+            className="p-1.5 rounded-lg border border-border text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors hidden md:block"
             aria-label={expanded ? "Minimizar" : "Expandir"}
           >
             {expanded ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
@@ -88,17 +88,17 @@ const CaseSlidePresentation = ({ slides, onViewFull }: CaseSlidePresentationProp
       </div>
 
       {/* Progress bar with labels */}
-      <div className={`flex gap-1 mb-6 ${expanded ? "px-8" : ""}`}>
+      <div className={`flex gap-1 mb-4 md:mb-6 overflow-x-auto ${expanded ? "px-4 md:px-8" : ""}`}>
         {slides.map((s, i) => (
           <button
             key={i}
             onClick={() => goTo(i)}
-            className="flex-1 group"
+            className="flex-1 min-w-[40px] group"
           >
             <div className={`h-1 rounded-full transition-all mb-1 ${
               i === current ? "bg-primary" : i < current ? "bg-primary/40" : "bg-border"
             }`} />
-            <span className={`font-body text-[10px] transition-colors ${
+            <span className={`font-body text-[9px] md:text-[10px] transition-colors line-clamp-1 ${
               i === current ? "text-primary font-semibold" : "text-muted-foreground/50 group-hover:text-muted-foreground"
             }`}>
               {s.label}
@@ -108,7 +108,7 @@ const CaseSlidePresentation = ({ slides, onViewFull }: CaseSlidePresentationProp
       </div>
 
       {/* Slide area */}
-      <div className={`relative overflow-hidden rounded-2xl border border-border bg-card ${expanded ? "flex-1 mx-8 mb-6" : "min-h-[340px] md:min-h-[400px]"}`}>
+      <div className={`relative overflow-hidden rounded-2xl border border-border bg-card ${expanded ? "flex-1 mx-4 md:mx-8 mb-6" : "min-h-[300px] md:min-h-[400px]"}`}>
         <AnimatePresence custom={direction} mode="wait">
           <motion.div
             key={`${current}-${persona}`}
@@ -118,15 +118,15 @@ const CaseSlidePresentation = ({ slides, onViewFull }: CaseSlidePresentationProp
             animate="center"
             exit="exit"
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="p-8 md:p-12 h-full"
+            className="p-5 md:p-12 h-full"
           >
             <p className="font-body text-xs uppercase tracking-[0.25em] text-primary font-semibold mb-2">
               {slide.label}
             </p>
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6 leading-snug">
+            <h3 className="font-display text-xl md:text-3xl font-bold text-foreground mb-4 md:mb-6 leading-snug">
               {slide.title}
             </h3>
-            <div className="font-body text-muted-foreground leading-relaxed">
+            <div className="font-body text-sm md:text-base text-muted-foreground leading-relaxed">
               {slide.content[persona]}
             </div>
           </motion.div>
@@ -150,8 +150,8 @@ const CaseSlidePresentation = ({ slides, onViewFull }: CaseSlidePresentationProp
       </div>
 
       {/* Footer with CTA */}
-      <div className={`flex items-center justify-between mt-4 ${expanded ? "px-8 pb-6" : ""}`}>
-        <div className="flex gap-1">
+      <div className={`flex flex-col sm:flex-row items-center justify-between gap-3 mt-4 ${expanded ? "px-4 md:px-8 pb-6" : ""}`}>
+        <div className="flex gap-1 order-2 sm:order-1">
           {slides.map((_, i) => (
             <button
               key={i}
@@ -162,9 +162,9 @@ const CaseSlidePresentation = ({ slides, onViewFull }: CaseSlidePresentationProp
             />
           ))}
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center gap-3 order-1 sm:order-2 w-full sm:w-auto">
           {isLastSlide && (
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               <a
                 href="mailto:gabriellecontato@outlook.com.br"
                 className="inline-flex items-center gap-1.5 font-body text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
@@ -185,7 +185,7 @@ const CaseSlidePresentation = ({ slides, onViewFull }: CaseSlidePresentationProp
           )}
           <button
             onClick={onViewFull}
-            className="font-body text-sm font-semibold px-5 py-2.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg transition-all flex items-center gap-2"
+            className="font-body text-sm font-semibold px-5 py-2.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg transition-all flex items-center gap-2 w-full sm:w-auto justify-center"
           >
             Ver análise completa
             <ChevronRight className="w-4 h-4" />

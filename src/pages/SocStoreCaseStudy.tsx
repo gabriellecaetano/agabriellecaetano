@@ -28,7 +28,7 @@ const SocStoreCaseStudy = () => {
       </nav>
 
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-28">
+      <section className="pt-24 pb-12 md:pt-40 md:pb-28">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="flex items-center gap-3 mb-6">
@@ -41,7 +41,7 @@ const SocStoreCaseStudy = () => {
               </div>
             </div>
 
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground leading-[1.05] mb-6">
+            <h1 className="font-display text-3xl md:text-6xl font-bold text-foreground leading-[1.1] mb-6">
               SOC Store — <span className="italic font-medium text-primary">Como transformei otimização de funil em +20% de conversão com integração de sistemas</span>
             </h1>
 
@@ -61,7 +61,7 @@ const SocStoreCaseStudy = () => {
       {/* Key Metrics Bar */}
       <Section>
         <div className="bg-secondary text-secondary-foreground">
-          <div className="max-w-5xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="max-w-5xl mx-auto px-4 md:px-6 py-8 md:py-10 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {[
               { value: "+20%", label: "Aumento em conversão" },
               { value: "+10%", label: "Aumento em retenção" },
@@ -69,7 +69,7 @@ const SocStoreCaseStudy = () => {
               { value: "CRM", label: "Fluxos automatizados" },
             ].map((m) => (
               <div key={m.label} className="text-center">
-                <p className="font-display text-3xl md:text-4xl font-bold">{m.value}</p>
+                <p className="font-display text-2xl md:text-4xl font-bold">{m.value}</p>
                 <p className="font-body text-sm text-secondary-foreground/60 mt-1">{m.label}</p>
               </div>
             ))}
@@ -78,7 +78,7 @@ const SocStoreCaseStudy = () => {
       </Section>
 
       {/* 01. Contexto de Negócio */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">01 · Contexto de Negócio</p>
@@ -123,7 +123,7 @@ const SocStoreCaseStudy = () => {
       </section>
 
       {/* 02. Problema Estratégico */}
-      <section className="py-20 bg-card/50">
+      <section className="py-12 md:py-20 bg-card/50">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">02 · Problema Estratégico</p>
@@ -164,7 +164,7 @@ const SocStoreCaseStudy = () => {
       </section>
 
       {/* 03. Hipóteses de Produto */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">03 · Hipóteses de Produto</p>
@@ -207,7 +207,7 @@ const SocStoreCaseStudy = () => {
       </section>
 
       {/* 04. Decisão de Produto */}
-      <section className="py-20 bg-card/50">
+      <section className="py-12 md:py-20 bg-card/50">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">04 · Decisão de Produto</p>
@@ -250,7 +250,7 @@ const SocStoreCaseStudy = () => {
       </section>
 
       {/* 05. Execução */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">05 · Execução</p>
@@ -308,7 +308,7 @@ const SocStoreCaseStudy = () => {
       </section>
 
       {/* 06. Impacto e Métricas */}
-      <section className="py-20 bg-card/50">
+      <section className="py-12 md:py-20 bg-card/50">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">06 · Impacto e Métricas</p>
@@ -373,7 +373,7 @@ const SocStoreCaseStudy = () => {
       </section>
 
       {/* 07. Aprendizados */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">07 · Aprendizados</p>
@@ -422,7 +422,7 @@ const SocStoreCaseStudy = () => {
       </section>
 
       {/* 08. Influência e Stakeholders */}
-      <section className="py-20 bg-card/50">
+      <section className="py-12 md:py-20 bg-card/50">
         <div className="max-w-5xl mx-auto px-6">
           <Section>
             <p className="font-body text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">08 · Influência e Stakeholders</p>
@@ -496,10 +496,10 @@ const SocStoreCaseStudy = () => {
           <p className="font-body text-secondary-foreground/60 mb-8">
             Vamos conversar sobre como posso contribuir para o seu time de Produto ou Marketing.
           </p>
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <a
               href="mailto:gabriellecontato@outlook.com.br"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-body text-sm font-semibold hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-body text-sm font-semibold hover:opacity-90 transition-opacity w-full sm:w-auto justify-center"
             >
               Entre em contato
             </a>
@@ -507,13 +507,13 @@ const SocStoreCaseStudy = () => {
               href="https://www.linkedin.com/in/gabriellecaetano/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-secondary-foreground/20 px-8 py-3.5 rounded-full font-body text-sm font-medium hover:bg-secondary-foreground/10 transition-colors"
+              className="inline-flex items-center gap-2 border border-secondary-foreground/20 px-8 py-3.5 rounded-full font-body text-sm font-medium hover:bg-secondary-foreground/10 transition-colors w-full sm:w-auto justify-center"
             >
               LinkedIn
             </a>
             <Link
               to="/"
-              className="inline-flex items-center gap-2 border border-secondary-foreground/20 px-8 py-3.5 rounded-full font-body text-sm font-medium hover:bg-secondary-foreground/10 transition-colors"
+              className="inline-flex items-center gap-2 border border-secondary-foreground/20 px-8 py-3.5 rounded-full font-body text-sm font-medium hover:bg-secondary-foreground/10 transition-colors w-full sm:w-auto justify-center"
             >
               Ver portfólio
             </Link>
