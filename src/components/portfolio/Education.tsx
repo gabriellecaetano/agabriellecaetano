@@ -29,6 +29,8 @@ const education = [
 ];
 
 const extras = [
+  "Google Analytics 4: Analisando estratégias e otimizando relatórios — Alura",
+  "Google Analytics: Configurando a conta e extraindo relatórios — Alura",
   "Google Ads: Criando uma campanha — Alura",
   "Google Tag Manager — Alura",
   "Branding Essential — LAJE",
