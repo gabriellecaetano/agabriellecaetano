@@ -5,7 +5,7 @@ const education = [
   {
     degree: "Pós-Graduação em Digital Product Management",
     school: "FIAP",
-    period: "2024 — Abr 2026",
+    period: "2024 — 2026",
     icon: GraduationCap,
   },
   {
