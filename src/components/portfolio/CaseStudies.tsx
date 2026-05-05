@@ -453,6 +453,7 @@ const socStoreSlides: SlideContent[] = [
       pmm: (
         <div className="space-y-4">
           <p>Atuação cross-funcional: ponte entre marketing, produto e operações. Cada decisão validada com dados e alinhada com as 3 áreas.</p>
+          <ArtifactsByStage />
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
             <p className="text-sm font-semibold text-foreground mb-1">Influência em stakeholders</p>
             <p className="text-sm">Converti budget de mídia paga para integração usando análise de ROI comparativo. Marketing e produto alinhados pelo win-win da integração.</p>
@@ -462,6 +463,7 @@ const socStoreSlides: SlideContent[] = [
       growth: (
         <div className="space-y-4">
           <p>Iterações em timing de e-mails (2h vs 24h), segmentação comportamental e CTAs. Cada teste medido por impacto em conversão — sem otimizações de vaidade.</p>
+          <ArtifactsByStage />
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
             <p className="text-sm font-semibold text-foreground mb-1">Insight de execução</p>
             <p className="text-sm">Timing foi mais impactante que copy — e-mails 2h após abandono tinham 3x mais abertura. Priorizamos timing sobre criatividade.</p>
@@ -472,6 +474,7 @@ const socStoreSlides: SlideContent[] = [
         <div className="space-y-4">
           <p>Integração Konviva + Safe2Pay: redução de etapas e eliminação de inconsistências. Mapeamento end-to-end revelou fricções que métricas agregadas não mostravam.</p>
           <p>CRM no HubSpot: fluxos automatizados com segmentação por comportamento (curso visto, carrinho abandonado, conclusão).</p>
+          <ArtifactsByStage />
         </div>
       ),
     },
