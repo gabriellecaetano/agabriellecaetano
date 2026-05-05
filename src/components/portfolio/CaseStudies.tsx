@@ -232,13 +232,17 @@ const assaiSlides: SlideContent[] = [
         <div className="space-y-4">
           <div className="grid grid-cols-3 gap-3">
             {[
-              { v: "80%", l: "conversão app → feature" },
-              { v: "NPS +20", l: "satisfação do usuário" },
-              { v: "27,2%", l: "taxa de resgate" },
+              { v: "80%", l: "conversão app → feature", b: "benchmark setor: 40–60%" },
+              { v: "NPS +20", l: "satisfação do usuário", b: "benchmark fidelidade: NPS +5 a +15" },
+              { v: "27,2%", l: "taxa de resgate", b: "benchmark varejo alimentar: 10–20%" },
             ].map((m) => (
               <div key={m.l} className="text-center p-4 rounded-xl bg-accent/50 border border-primary/10">
                 <p className="font-display text-2xl font-bold text-foreground">{m.v}</p>
                 <p className="text-xs text-muted-foreground mt-1">{m.l}</p>
+                <p className="text-[11px] text-muted-foreground/80 mt-2 flex items-center justify-center gap-1">
+                  <span className="text-[#2d7c44] font-bold">↑</span>
+                  <span>{m.b}</span>
+                </p>
               </div>
             ))}
           </div>
