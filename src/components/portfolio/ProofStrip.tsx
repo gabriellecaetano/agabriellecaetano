@@ -5,7 +5,7 @@ const proofs = [
   { icon: Users, value: "80%", label: "adoção de feature", detail: "Conversão app → PontoAí" },
   { icon: Award, value: "NPS +20", label: "satisfação do usuário", detail: "Programa de fidelidade" },
   { icon: TrendingUp, value: "27%", label: "taxa de resgate", detail: "Engajamento com benefícios" },
-  { icon: Zap, value: "PLG + Growth", label: "especialidade", detail: "Discovery, GTM, métricas" },
+  { icon: Zap, value: "+2", label: "GTM's lançados", detail: "SOC Store + PontoAí" },
 ];
 
 const ProofStrip = () => {
