@@ -7,6 +7,36 @@ import CaseSlidePresentation, { type Persona, type SlideContent } from "./CaseSl
 import caseAssaiCover from "@/assets/case-assai-cover.png";
 import caseSocCover from "@/assets/case-soc-cover.png";
 
+/* ── Artefatos por etapa: enriquece slides de Execução ── */
+const ARTIFACTS: Record<string, { stage: string; items: string }[]> = {
+  pontoai: [
+    { stage: "Discovery", items: "Pesquisa com 12 usuários reais (gerentes de restaurante e consumidores finais), mapeamento de personas, benchmark de programas de fidelidade concorrentes." },
+    { stage: "Protótipo", items: "Wireframes de baixa fidelidade no Figma, validação com 5 usuários antes de avançar para desenvolvimento." },
+    { stage: "MVP", items: "Funcionalidades priorizadas: cadastro, acúmulo de pontos, cashback na primeira compra, integração com app Meu Assaí existente." },
+    { stage: "Testes", items: "Teste A/B da tela de onboarding, análise de funil de ativação, ajuste de copy com base em drop-off." },
+  ],
+  soc: [
+    { stage: "Discovery", items: "Entrevistas com times de marketing, vendas e operações; auditoria da jornada atual; mapeamento de fricções entre Konviva, Safe2Pay e HubSpot." },
+    { stage: "Protótipo", items: "Blueprint da nova jornada end-to-end e fluxos de automação no HubSpot validados com stakeholders antes do build." },
+    { stage: "MVP", items: "Frente 1 — integração LMS + pagamento em produção; gatilhos de carrinho abandonado e segmentação comportamental ativos." },
+    { stage: "Testes", items: "A/B em timing de e-mails (2h vs 24h), variações de copy e CTA; leitura de funil por coorte para isolar impacto." },
+  ],
+};
+
+const ArtifactsByStage = ({ variant = "pontoai" }: { variant?: "pontoai" | "soc" }) => (
+  <div className="p-4 rounded-xl bg-accent/30 border border-primary/10 space-y-2.5">
+    <p className="text-sm font-semibold text-foreground">Artefatos por etapa</p>
+    <ul className="space-y-2">
+      {ARTIFACTS[variant].map((a) => (
+        <li key={a.stage} className="text-sm leading-relaxed">
+          <span className="font-semibold text-foreground">{a.stage}: </span>
+          <span className="text-muted-foreground">{a.items}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
 /* ── Assaí slides — Senior PM framing (strategic thinking + business impact) ── */
 const assaiSlides: SlideContent[] = [
   {
@@ -163,6 +193,7 @@ const assaiSlides: SlideContent[] = [
       pmm: (
         <div className="space-y-4">
           <p>Estratégia omnichannel integrando app, loja, WhatsApp e e-mail. Posicionamento validado com personas reais — do gerente de restaurante ao consumidor final.</p>
+          <ArtifactsByStage />
           <div className="flex gap-3 flex-wrap mt-2">
             <a href="https://postechfiapfase3.adalo.com/assa-app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm bg-primary/10 text-primary font-semibold px-4 py-2 rounded-lg hover:bg-primary/20 transition-colors">
               Testar MVP <ExternalLink className="w-3.5 h-3.5" />
@@ -173,6 +204,7 @@ const assaiSlides: SlideContent[] = [
       growth: (
         <div className="space-y-4">
           <p>PLG: onboarding gamificado com cashback imediato na primeira compra. Aquisição multicanal (push, WhatsApp, influenciadores regionais) com foco em ativação, não impressões.</p>
+          <ArtifactsByStage />
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
             <p className="text-sm font-semibold text-foreground mb-1">Por que PLG e não campanha tradicional?</p>
             <p className="text-sm">Benefício imediato no primeiro uso reduz time-to-value. O produto converte sozinho — CAC de aquisição orgânica 3-5x menor que mídia paga.</p>
@@ -182,6 +214,7 @@ const assaiSlides: SlideContent[] = [
       product: (
         <div className="space-y-4">
           <p>Protótipo no Figma → testes de usabilidade com usuários reais → iterações → MVP funcional no Adalo para validação rápida.</p>
+          <ArtifactsByStage />
           <div className="flex gap-3 flex-wrap mt-2">
             <a href="https://postechfiapfase3.adalo.com/assa-app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm bg-primary/10 text-primary font-semibold px-4 py-2 rounded-lg hover:bg-primary/20 transition-colors">
               Testar MVP <ExternalLink className="w-3.5 h-3.5" />
@@ -450,6 +483,7 @@ const socStoreSlides: SlideContent[] = [
       pmm: (
         <div className="space-y-4">
           <p>Atuação cross-funcional: ponte entre marketing, produto e operações. Cada decisão validada com dados e alinhada com as 3 áreas.</p>
+          <ArtifactsByStage variant="soc" />
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
             <p className="text-sm font-semibold text-foreground mb-1">Influência em stakeholders</p>
             <p className="text-sm">Converti budget de mídia paga para integração usando análise de ROI comparativo. Marketing e produto alinhados pelo win-win da integração.</p>
@@ -459,6 +493,7 @@ const socStoreSlides: SlideContent[] = [
       growth: (
         <div className="space-y-4">
           <p>Iterações em timing de e-mails (2h vs 24h), segmentação comportamental e CTAs. Cada teste medido por impacto em conversão — sem otimizações de vaidade.</p>
+          <ArtifactsByStage variant="soc" />
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
             <p className="text-sm font-semibold text-foreground mb-1">Insight de execução</p>
             <p className="text-sm">Timing foi mais impactante que copy — e-mails 2h após abandono tinham 3x mais abertura. Priorizamos timing sobre criatividade.</p>
@@ -469,6 +504,7 @@ const socStoreSlides: SlideContent[] = [
         <div className="space-y-4">
           <p>Integração Konviva + Safe2Pay: redução de etapas e eliminação de inconsistências. Mapeamento end-to-end revelou fricções que métricas agregadas não mostravam.</p>
           <p>CRM no HubSpot: fluxos automatizados com segmentação por comportamento (curso visto, carrinho abandonado, conclusão).</p>
+          <ArtifactsByStage variant="soc" />
         </div>
       ),
     },
