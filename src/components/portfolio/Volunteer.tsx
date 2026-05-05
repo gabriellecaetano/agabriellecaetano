@@ -30,17 +30,14 @@ const Volunteer = () => {
                 </div>
               </div>
               <p className="font-body text-xs text-muted-foreground mb-3">Out 2016 — Out 2017</p>
-              <ul className="space-y-1.5">
-                <li className="font-body text-sm text-muted-foreground leading-relaxed flex gap-2">
-                  <span className="text-primary mt-1 flex-shrink-0">·</span>
-                  Desenvolvi materiais gráficos e estratégias de mídia social, impulsionando a conscientização sobre o câncer
-                  de mama — mais de <strong className="text-foreground">340 doações de cabelo</strong> e <strong className="text-foreground">60 lenços</strong> arrecadados.
-                </li>
-                <li className="font-body text-sm text-muted-foreground leading-relaxed flex gap-2">
-                  <span className="text-primary mt-1 flex-shrink-0">·</span>
-                  Coordenei a comunicação do projeto, conquistando cobertura na <strong className="text-foreground">Tribuna da Globo</strong>.
-                </li>
-              </ul>
+              <div className="space-y-3">
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  Desenvolvi materiais gráficos e estratégias de mídia social, impulsionando a conscientização sobre o câncer de mama — com mais de 340 doações de cabelo e 60 lenços arrecadados.
+                </p>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  Coordenei a comunicação do projeto, conquistando cobertura na Tribuna da Globo.
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>
