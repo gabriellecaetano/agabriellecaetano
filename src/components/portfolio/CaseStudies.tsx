@@ -163,6 +163,7 @@ const assaiSlides: SlideContent[] = [
       pmm: (
         <div className="space-y-4">
           <p>Estratégia omnichannel integrando app, loja, WhatsApp e e-mail. Posicionamento validado com personas reais — do gerente de restaurante ao consumidor final.</p>
+          <ArtifactsByStage />
           <div className="flex gap-3 flex-wrap mt-2">
             <a href="https://postechfiapfase3.adalo.com/assa-app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm bg-primary/10 text-primary font-semibold px-4 py-2 rounded-lg hover:bg-primary/20 transition-colors">
               Testar MVP <ExternalLink className="w-3.5 h-3.5" />
@@ -173,6 +174,7 @@ const assaiSlides: SlideContent[] = [
       growth: (
         <div className="space-y-4">
           <p>PLG: onboarding gamificado com cashback imediato na primeira compra. Aquisição multicanal (push, WhatsApp, influenciadores regionais) com foco em ativação, não impressões.</p>
+          <ArtifactsByStage />
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
             <p className="text-sm font-semibold text-foreground mb-1">Por que PLG e não campanha tradicional?</p>
             <p className="text-sm">Benefício imediato no primeiro uso reduz time-to-value. O produto converte sozinho — CAC de aquisição orgânica 3-5x menor que mídia paga.</p>
@@ -182,6 +184,7 @@ const assaiSlides: SlideContent[] = [
       product: (
         <div className="space-y-4">
           <p>Protótipo no Figma → testes de usabilidade com usuários reais → iterações → MVP funcional no Adalo para validação rápida.</p>
+          <ArtifactsByStage />
           <div className="flex gap-3 flex-wrap mt-2">
             <a href="https://postechfiapfase3.adalo.com/assa-app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm bg-primary/10 text-primary font-semibold px-4 py-2 rounded-lg hover:bg-primary/20 transition-colors">
               Testar MVP <ExternalLink className="w-3.5 h-3.5" />
