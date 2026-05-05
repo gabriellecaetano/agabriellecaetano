@@ -521,14 +521,18 @@ const socStoreSlides: SlideContent[] = [
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-3">
             {[
-              { v: "+20%", l: "conversão no funil" },
-              { v: "+10%", l: "retenção de alunos" },
-              { v: "3→1", l: "plataformas integradas" },
-              { v: "3x", l: "ROI vs. mais tráfego" },
+              { v: "+20%", l: "conversão no funil", b: "benchmark e-learning: +5–10%" },
+              { v: "+10%", l: "retenção de alunos", b: "benchmark cursos online: +3–7%" },
+              { v: "3→1", l: "plataformas integradas", b: "benchmark mercado: 2–3 stacks separadas" },
+              { v: "3x", l: "ROI vs. mais tráfego", b: "benchmark otimização CRM: 1,5–2x" },
             ].map((m) => (
               <div key={m.l} className="text-center p-4 rounded-xl bg-accent/50 border border-primary/10">
                 <p className="font-display text-2xl font-bold text-foreground">{m.v}</p>
                 <p className="text-xs text-muted-foreground mt-1">{m.l}</p>
+                <p className="text-[11px] text-muted-foreground/80 mt-2 flex items-center justify-center gap-1">
+                  <span className="text-[#2d7c44] font-bold">↑</span>
+                  <span>{m.b}</span>
+                </p>
               </div>
             ))}
           </div>
