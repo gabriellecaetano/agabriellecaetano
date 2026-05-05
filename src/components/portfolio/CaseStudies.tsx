@@ -7,6 +7,36 @@ import CaseSlidePresentation, { type Persona, type SlideContent } from "./CaseSl
 import caseAssaiCover from "@/assets/case-assai-cover.png";
 import caseSocCover from "@/assets/case-soc-cover.png";
 
+/* ── Artefatos por etapa: enriquece slides de Execução ── */
+const ARTIFACTS: Record<string, { stage: string; items: string }[]> = {
+  pontoai: [
+    { stage: "Discovery", items: "Pesquisa com 12 usuários reais (gerentes de restaurante e consumidores finais), mapeamento de personas, benchmark de programas de fidelidade concorrentes." },
+    { stage: "Protótipo", items: "Wireframes de baixa fidelidade no Figma, validação com 5 usuários antes de avançar para desenvolvimento." },
+    { stage: "MVP", items: "Funcionalidades priorizadas: cadastro, acúmulo de pontos, cashback na primeira compra, integração com app Meu Assaí existente." },
+    { stage: "Testes", items: "Teste A/B da tela de onboarding, análise de funil de ativação, ajuste de copy com base em drop-off." },
+  ],
+  soc: [
+    { stage: "Discovery", items: "Entrevistas com times de marketing, vendas e operações; auditoria da jornada atual; mapeamento de fricções entre Konviva, Safe2Pay e HubSpot." },
+    { stage: "Protótipo", items: "Blueprint da nova jornada end-to-end e fluxos de automação no HubSpot validados com stakeholders antes do build." },
+    { stage: "MVP", items: "Frente 1 — integração LMS + pagamento em produção; gatilhos de carrinho abandonado e segmentação comportamental ativos." },
+    { stage: "Testes", items: "A/B em timing de e-mails (2h vs 24h), variações de copy e CTA; leitura de funil por coorte para isolar impacto." },
+  ],
+};
+
+const ArtifactsByStage = ({ variant = "pontoai" }: { variant?: "pontoai" | "soc" }) => (
+  <div className="p-4 rounded-xl bg-accent/30 border border-primary/10 space-y-2.5">
+    <p className="text-sm font-semibold text-foreground">Artefatos por etapa</p>
+    <ul className="space-y-2">
+      {ARTIFACTS[variant].map((a) => (
+        <li key={a.stage} className="text-sm leading-relaxed">
+          <span className="font-semibold text-foreground">{a.stage}: </span>
+          <span className="text-muted-foreground">{a.items}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
 /* ── Assaí slides — Senior PM framing (strategic thinking + business impact) ── */
 const assaiSlides: SlideContent[] = [
   {
