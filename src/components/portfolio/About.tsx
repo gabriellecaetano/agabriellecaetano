@@ -85,6 +85,29 @@ const About = () => {
           </motion.div>
         </div>
 
+        {/* Testimonial — edit name/role/company below */}
+        <motion.figure
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative mb-16 p-6 md:p-8 pl-8 md:pl-10 rounded-r-2xl bg-muted/60 border-l-[3px] border-primary overflow-hidden"
+        >
+          <span
+            aria-hidden="true"
+            className="font-display absolute -top-4 left-3 text-primary/20 text-7xl md:text-8xl leading-none select-none pointer-events-none"
+          >
+            “
+          </span>
+          <blockquote className="font-display italic text-foreground text-[15px] md:text-base leading-relaxed relative z-10">
+            Gabi tem uma capacidade rara de conectar dados de produto com narrativa estratégica. Ela não entrega relatórios — ela entrega decisões.
+          </blockquote>
+          <figcaption className="font-body text-xs text-muted-foreground mt-4 not-italic">
+            {/* TODO: substituir por depoimento real */}
+            — [Nome], [Cargo] · [Empresa]
+          </figcaption>
+        </motion.figure>
+
         {/* Contributions Grid */}
         <p className="font-body text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-6">Posso atuar diretamente em</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
