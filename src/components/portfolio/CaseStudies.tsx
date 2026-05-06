@@ -663,7 +663,7 @@ const CaseStudies = () => {
         </motion.div>
 
         {/* Case selector cards */}
-        <div className="grid md:grid-cols-2 gap-4 mb-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
           {cases.map((cs) => (
             <motion.button
               key={cs.id}
@@ -710,6 +710,31 @@ const CaseStudies = () => {
               </div>
             </motion.button>
           ))}
+
+          {/* Placeholder card — case in development */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-2xl border border-dashed border-primary/40 overflow-hidden bg-gradient-to-br from-background via-accent/40 to-primary/20 flex flex-col"
+          >
+            <div className="h-36 md:h-44 w-full bg-gradient-to-br from-accent/60 to-primary/30 flex items-center justify-center opacity-70">
+              <span className="font-display italic text-primary/60 text-xl">em produção</span>
+            </div>
+            <div className="p-6 opacity-70">
+              <div className="flex items-start justify-between mb-3">
+                <span className="font-body text-xs uppercase tracking-widest text-primary font-semibold px-2 py-0.5 rounded bg-primary/10">
+                  Em breve
+                </span>
+              </div>
+              <h3 className="font-display text-lg font-bold text-foreground mb-2 leading-snug">
+                Novo case em produção
+              </h3>
+              <p className="font-body text-sm text-muted-foreground">
+                Estratégia GTM para lançamento B2B · 2025
+              </p>
+            </div>
+          </motion.div>
         </div>
 
         {/* Slide presentation */}

@@ -43,6 +43,13 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+          {/* TODO: substituir href pelo PDF do CV */}
+          <a
+            href="#"
+            className="font-body text-xs uppercase tracking-wider border border-primary text-primary px-3 py-1.5 rounded-md hover:bg-primary hover:text-primary-foreground transition-colors"
+          >
+            ↓ CV
+          </a>
         </div>
 
         <button onClick={() => setOpen(!open)} className="md:hidden text-foreground" aria-label="Menu">
@@ -63,6 +70,13 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <a
+              href="#"
+              onClick={() => setOpen(false)}
+              className="font-body text-sm border border-primary text-primary px-3 py-1.5 rounded-md text-center hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              ↓ CV
+            </a>
           </div>
         </div>
       )}
