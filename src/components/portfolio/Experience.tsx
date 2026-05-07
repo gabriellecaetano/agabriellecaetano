@@ -115,6 +115,10 @@ const Experience = () => {
                   <span className="font-body text-xs text-muted-foreground whitespace-nowrap">{exp.period}</span>
                 </div>
 
+                {exp.highlight && (
+                  <p className="font-body text-sm text-foreground/80 italic mb-3">{exp.highlight}</p>
+                )}
+
                 <ul className="space-y-1.5 mb-3">
                   {exp.bullets.map((bullet, j) => (
                     <li key={j} className="font-body text-sm text-muted-foreground leading-relaxed flex gap-2">
@@ -123,6 +127,20 @@ const Experience = () => {
                     </li>
                   ))}
                 </ul>
+
+                {exp.results && exp.results.length > 0 && (
+                  <div className="mb-3 pl-3 border-l-2 border-primary/40">
+                    <p className="font-body text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-1.5">Resultados</p>
+                    <ul className="space-y-1">
+                      {exp.results.map((r, k) => (
+                        <li key={k} className="font-body text-sm text-foreground/80 leading-relaxed flex gap-2">
+                          <span className="text-primary mt-1 flex-shrink-0">↑</span>
+                          {r}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
                 <div className="flex flex-wrap gap-1.5">
                   {exp.tags.map((tag) => (
