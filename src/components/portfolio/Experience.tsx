@@ -7,7 +7,7 @@ const experiences = [
     location: "Santos, SP",
     period: "Fev 2024 — Atual",
     current: true,
-    highlight: "Projeto estratégico: SOC Store — Marketplace de soluções para profissionais de SST",
+    highlight: "Projeto estratégico: Marketplace de SST — Soluções para profissionais de SST",
     bullets: [
       "Atuação estratégica na interface entre produto, marketing e negócio, contribuindo para o posicionamento e comunicação de soluções tecnológicas.",
       "Desenvolvimento e execução de campanhas orientadas à geração de demanda, awareness e conversão.",

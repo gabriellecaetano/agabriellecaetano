@@ -331,7 +331,7 @@ const assaiSlides: SlideContent[] = [
   },
 ];
 
-/* ── SOC Store slides — Senior PM framing (strategic thinking + business impact) ── */
+/* ── Marketplace de SST slides — Senior PM framing (strategic thinking + business impact) ── */
 const socStoreSlides: SlideContent[] = [
   {
     label: "Contexto de Negócio",
@@ -339,7 +339,7 @@ const socStoreSlides: SlideContent[] = [
     content: {
       pmm: (
         <div className="space-y-4">
-          <p>SOC Store: marketplace de treinamentos para profissionais de SST. Aquisição estruturada, mas jornada do usuário passava por 3 plataformas sem integração — cada transição era ponto de abandono.</p>
+          <p>Marketplace de SST: marketplace de treinamentos para profissionais de SST. Aquisição estruturada, mas jornada do usuário passava por 3 plataformas sem integração — cada transição era ponto de abandono.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
             <p className="text-sm font-semibold text-foreground mb-1">Impacto no negócio</p>
             <p className="text-sm">Tráfego qualificado se perdia no funil. CAC crescente sem compensação — LTV limitado por ausência de retenção estruturada.</p>
@@ -629,7 +629,7 @@ const CaseStudies = () => {
     {
       id: "soc" as const,
       tag: "Case de Produto",
-      title: "SOC Store — Como transformei otimização de funil em +20% de conversão",
+      title: "Marketplace de SST — Como transformei otimização de funil em +20% de conversão",
       description: "Hipóteses, trade-offs e decisões: de uma jornada fragmentada entre 3 plataformas a um funil integrado com +20% conversão e +10% retenção.",
       icon: Store,
       cover: caseSocCover,
