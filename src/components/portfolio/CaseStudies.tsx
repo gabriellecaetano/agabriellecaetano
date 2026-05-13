@@ -680,11 +680,12 @@ const CaseStudies = () => {
                   : "border-border bg-card hover:border-primary/30"
               }`}
             >
-              <div className="h-36 md:h-44 w-full overflow-hidden">
+              <div className="aspect-[8/5] w-full overflow-hidden">
                 <img
                   src={cs.cover}
                   alt={cs.title}
                   loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                 />
               </div>
