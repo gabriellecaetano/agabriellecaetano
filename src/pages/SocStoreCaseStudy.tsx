@@ -42,7 +42,7 @@ const SocStoreCaseStudy = () => {
             </div>
 
             <h1 className="font-display text-3xl md:text-6xl font-bold text-foreground leading-[1.1] mb-6">
-              SOC Store — <span className="italic font-medium text-primary">Como transformei otimização de funil em +20% de conversão com integração de sistemas</span>
+              Marketplace de SST — <span className="italic font-medium text-primary">Como transformei otimização de funil em +20% de conversão com integração de sistemas</span>
             </h1>
 
             <p className="font-body text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed mb-10">
@@ -88,7 +88,7 @@ const SocStoreCaseStudy = () => {
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <p className="font-body text-muted-foreground leading-relaxed mb-4">
-                  A SOC Store é um marketplace de treinamentos e serviços para profissionais de SST (Segurança e Saúde no Trabalho), com modelo de receita baseado em venda direta de cursos. A aquisição era estruturada, mas o funil tinha ineficiências ocultas.
+                  O Marketplace de SST é um marketplace de treinamentos e serviços para profissionais de SST (Segurança e Saúde no Trabalho), com modelo de receita baseado em venda direta de cursos. A aquisição era estruturada, mas o funil tinha ineficiências ocultas.
                 </p>
                 <p className="font-body text-muted-foreground leading-relaxed">
                   O tráfego chegava, mas a conversão não acompanhava. A jornada do usuário passava por 3 plataformas distintas (site, LMS Konviva e gateway Safe2Pay) sem integração — cada transição era uma oportunidade de abandono.
