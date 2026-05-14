@@ -339,7 +339,7 @@ const socStoreSlides: SlideContent[] = [
     content: {
       pmm: (
         <div className="space-y-4">
-          <p>Marketplace de SST: marketplace de treinamentos para profissionais de SST. Aquisição estruturada, mas jornada do usuário passava por 3 plataformas sem integração — cada transição era ponto de abandono.</p>
+          <p>Marketplace de SST: plataforma para comercialização de treinamentos e serviços personalizados para profissionais de SST. Aquisição estruturada, mas jornada do usuário passava por 3 plataformas sem integração — cada transição era ponto de abandono.</p>
           <div className="p-4 rounded-xl bg-accent/30 border border-primary/10">
             <p className="text-sm font-semibold text-foreground mb-1">Impacto no negócio</p>
             <p className="text-sm">Tráfego qualificado se perdia no funil. CAC crescente sem compensação — LTV limitado por ausência de retenção estruturada.</p>
